@@ -36,6 +36,22 @@ app.use(morgan('dev'));
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/exports', express.static(path.join(__dirname, '../exports')));
 
+// Serve frontend build in production
+if (process.env.NODE_ENV === 'production') {
+  const frontendPath = process.env.FRONTEND_BUILD_PATH || path.join(__dirname, '../../frontend/build');
+  
+  // Serve static files from React build
+  app.use(express.static(frontendPath));
+  
+  // Handle React routing - must be after API routes
+  app.get('*', (req, res) => {
+    // Don't serve index.html for API routes
+    if (!req.path.startsWith('/api/') && !req.path.startsWith('/socket.io/')) {
+      res.sendFile(path.join(frontendPath, 'index.html'));
+    }
+  });
+}
+
 // Make io accessible to routes
 app.set('io', io);
 
@@ -85,6 +101,7 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => {
   console.log(`Ignition Layout Studio Server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 
 module.exports = { app, io };

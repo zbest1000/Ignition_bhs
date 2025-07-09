@@ -5,6 +5,7 @@ const fs = require('fs').promises;
 const Project = require('../models/Project');
 const Component = require('../models/Component');
 const { v4: uuidv4 } = require('uuid');
+const ocrService = require('../services/ocrService');
 
 // Process file with OCR
 router.post('/process/:projectId/:fileId', async (req, res) => {
@@ -134,48 +135,27 @@ router.post('/reprocess/:projectId/:fileId', async (req, res) => {
 
 // OCR processing function (placeholder for PaddleOCR MCP integration)
 async function processWithOCR(filePath, options = {}) {
-  // This is a placeholder for the actual PaddleOCR integration via MCP
-  // In production, this would communicate with PaddleOCR through the Model Context Protocol
+  // Use the OCR service for processing
+  const result = await ocrService.processImage(filePath);
   
-  console.log('Processing file with OCR:', filePath, options);
-  
-  // Simulate OCR results for now
-  const mockOCRResult = {
-    textBlocks: [
-      {
-        text: 'CONV_01',
-        bbox: { x: 100, y: 200, width: 80, height: 30 },
-        confidence: 0.95
+  // Transform to expected format
+  return {
+    textBlocks: result.texts.map(text => ({
+      text: text.text,
+      bbox: {
+        x: text.bbox[0],
+        y: text.bbox[1],
+        width: text.bbox[2] - text.bbox[0],
+        height: text.bbox[3] - text.bbox[1]
       },
-      {
-        text: 'Motor M1',
-        bbox: { x: 300, y: 150, width: 70, height: 25 },
-        confidence: 0.92
-      },
-      {
-        text: 'EDS-3',
-        bbox: { x: 500, y: 300, width: 60, height: 30 },
-        confidence: 0.88
-      },
-      {
-        text: 'Diverter D2',
-        bbox: { x: 700, y: 400, width: 90, height: 35 },
-        confidence: 0.91
-      }
-    ],
+      confidence: text.confidence
+    })),
     metadata: {
-      processingTime: 1234,
-      imageSize: { width: 1920, height: 1080 }
+      processingTime: Date.now(),
+      imageSize: { width: 1920, height: 1080 },
+      componentsDetected: result.components.length
     }
   };
-  
-  // In real implementation, this would:
-  // 1. Connect to PaddleOCR via MCP
-  // 2. Send the image for processing
-  // 3. Receive structured OCR results
-  // 4. Return the processed data
-  
-  return mockOCRResult;
 }
 
 // Extract components from OCR results

@@ -39,6 +39,10 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
 
     switch (type) {
       case 'straight_conveyor':
+      case 'belt_conveyor':
+      case 'roller_conveyor':
+      case 'chain_conveyor':
+      case 'accumulation_conveyor':
         return (
           <Rect
             width={geometry.width}
@@ -66,6 +70,8 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
         );
 
       case 'diverter':
+      case 'merge':
+      case 'sorter':
         return (
           <>
             <Line
@@ -89,6 +95,8 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
         );
 
       case 'motor':
+      case 'pusher':
+      case 'lifter':
         return (
           <Circle
             x={geometry.width / 2}
@@ -102,6 +110,11 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
         );
 
       case 'eds_machine':
+      case 'scanner':
+      case 'scale':
+      case 'wrapper':
+      case 'barcode_scanner':
+      case 'rfid_reader':
         return (
           <Rect
             width={geometry.width}
@@ -112,6 +125,169 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
             opacity={style.opacity}
             cornerRadius={10}
           />
+        );
+
+      case 'turntable':
+      case 'spiral_conveyor':
+        return (
+          <>
+            <Circle
+              x={geometry.width / 2}
+              y={geometry.height / 2}
+              radius={Math.min(geometry.width, geometry.height) / 2}
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            {type === 'spiral_conveyor' && (
+              <Path
+                data={`M ${geometry.width * 0.3} ${geometry.height * 0.3} Q ${geometry.width * 0.5} ${geometry.height * 0.5} ${geometry.width * 0.7} ${geometry.height * 0.7}`}
+                stroke={style.stroke}
+                strokeWidth={2}
+                fill="none"
+              />
+            )}
+          </>
+        );
+
+      case 'palletizer':
+      case 'depalletizer':
+      case 'robot_arm':
+        return (
+          <>
+            <Rect
+              width={geometry.width}
+              height={geometry.height}
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            {type === 'robot_arm' && (
+              <Line
+                points={[
+                  geometry.width / 2, geometry.height / 2,
+                  geometry.width * 0.8, geometry.height * 0.3
+                ]}
+                stroke={style.stroke}
+                strokeWidth={3}
+              />
+            )}
+          </>
+        );
+
+      case 'agv_station':
+        return (
+          <Path
+            data={generateHexagonPath(geometry.width, geometry.height)}
+            fill={style.fill}
+            stroke={style.stroke}
+            strokeWidth={style.strokeWidth}
+            opacity={style.opacity}
+          />
+        );
+
+      case 'safety_gate':
+        return (
+          <>
+            <Rect
+              width={geometry.width}
+              height={geometry.height}
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            <Line
+              points={[
+                geometry.width * 0.2, geometry.height * 0.3,
+                geometry.width * 0.8, geometry.height * 0.3,
+                geometry.width * 0.8, geometry.height * 0.7,
+                geometry.width * 0.2, geometry.height * 0.7
+              ]}
+              stroke={style.stroke}
+              strokeWidth={2}
+              dash={[5, 5]}
+            />
+          </>
+        );
+
+      case 'emergency_stop':
+        return (
+          <>
+            <Circle
+              x={geometry.width / 2}
+              y={geometry.height / 2}
+              radius={Math.min(geometry.width, geometry.height) / 2}
+              fill="#E74C3C"
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            <Text
+              x={geometry.width / 2}
+              y={geometry.height / 2}
+              text="E"
+              fontSize={16}
+              fontStyle="bold"
+              fill="white"
+              align="center"
+              verticalAlign="middle"
+              offsetX={5}
+              offsetY={8}
+            />
+          </>
+        );
+
+      case 'sensor':
+      case 'photo_eye':
+      case 'proximity_sensor':
+        return (
+          <>
+            <Circle
+              x={geometry.width / 2}
+              y={geometry.height / 2}
+              radius={Math.min(geometry.width, geometry.height) / 3}
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            {type === 'photo_eye' && (
+              <Line
+                points={[
+                  geometry.width / 2, geometry.height / 2,
+                  geometry.width, geometry.height / 2
+                ]}
+                stroke={style.stroke}
+                strokeWidth={2}
+                dash={[3, 3]}
+              />
+            )}
+          </>
+        );
+
+      case 'label_printer':
+        return (
+          <>
+            <Rect
+              width={geometry.width}
+              height={geometry.height}
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth={style.strokeWidth}
+              opacity={style.opacity}
+            />
+            <Rect
+              x={geometry.width * 0.1}
+              y={geometry.height * 0.6}
+              width={geometry.width * 0.8}
+              height={geometry.height * 0.2}
+              fill="white"
+              stroke={style.stroke}
+            />
+          </>
         );
 
       default:
@@ -138,6 +314,22 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
     const largeArcFlag = angle > 180 ? 1 : 0;
 
     return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY}`;
+  };
+
+  const generateHexagonPath = (width: number, height: number): string => {
+    const cx = width / 2;
+    const cy = height / 2;
+    const r = Math.min(width, height) / 2;
+    const points = [];
+    
+    for (let i = 0; i < 6; i++) {
+      const angle = (Math.PI / 3) * i;
+      const x = cx + r * Math.cos(angle);
+      const y = cy + r * Math.sin(angle);
+      points.push(`${i === 0 ? 'M' : 'L'} ${x} ${y}`);
+    }
+    
+    return points.join(' ') + ' Z';
   };
 
   const selectionColor = isSelected ? '#0066ff' : isHovered ? '#66aaff' : 'transparent';

@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  ignition-layout-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ignition-layout-studio
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - FRONTEND_URL=http://localhost:5000
+      # PaddleOCR MCP configuration (optional)
+      - PADDLE_OCR_MCP_PATH=${PADDLE_OCR_MCP_PATH:-}
+      - PADDLE_OCR_MODEL_PATH=${PADDLE_OCR_MODEL_PATH:-}
+    volumes:
+      # Persist data
+      - ./data/uploads:/app/backend/uploads
+      - ./data/exports:/app/backend/exports
+      - ./data/projects:/app/backend/projects
+      - ./data/logs:/app/backend/logs
+      # Optional: Mount PaddleOCR MCP if using local installation
+      # - /path/to/paddleocr-mcp:/usr/local/bin/paddleocr-mcp:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - ignition-network
+
+  # Optional: Nginx reverse proxy for production
+  nginx:
+    image: nginx:alpine
+    container_name: ignition-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - ignition-layout-studio
+    networks:
+      - ignition-network
+    profiles:
+      - production
+
+networks:
+  ignition-network:
+    driver: bridge
+
+volumes:
+  uploads:
+  exports:
+  projects:
+  logs:
