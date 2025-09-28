@@ -220,11 +220,10 @@ class ConfigService {
   getOCRConfig() {
     return {
       provider: this.get('OCR_PROVIDER', 'mock'),
-      paddleOCR: {
-        pythonPath: this.get('PADDLE_OCR_PYTHON_PATH', 'python'),
-        modelPath: this.get('PADDLE_OCR_MODEL_PATH', './models/paddleocr'),
-        languages: this.get('PADDLE_OCR_LANGUAGES', 'en,es,fr,de').split(','),
-        useGPU: this.get('PADDLE_OCR_USE_GPU', 'false') === 'true'
+      nativeOCR: {
+        language: this.get('OCR_LANGUAGE', 'eng'),
+        confidence: parseFloat(this.get('OCR_CONFIDENCE', '0.7')),
+        preprocessing: this.get('OCR_PREPROCESSING', 'true') === 'true'
       },
       tesseract: {
         executablePath: this.get('TESSERACT_EXECUTABLE_PATH'),

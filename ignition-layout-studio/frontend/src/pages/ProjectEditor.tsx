@@ -1358,7 +1358,7 @@ const ProjectEditor: React.FC = () => {
               <Form.Item label='OCR Mode'>
                 <Select defaultValue='mock' style={{ width: '100%' }}>
                   <Select.Option value='mock'>Mock OCR (for testing)</Select.Option>
-                  <Select.Option value='paddleocr'>PaddleOCR</Select.Option>
+                  <Select.Option value='native'>Native OCR</Select.Option>
                   <Select.Option value='tesseract'>Tesseract</Select.Option>
                 </Select>
               </Form.Item>

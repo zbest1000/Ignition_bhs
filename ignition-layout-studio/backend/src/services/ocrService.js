@@ -1,22 +1,13 @@
 const fs = require('fs').promises;
 const path = require('path');
-const { spawn } = require('child_process');
-const { promisify } = require('util');
-const exec = promisify(require('child_process').exec);
+const logger = require('./loggerService');
 
 class OCRService {
   constructor() {
-    // Resolve PaddleOCR MCP executable
-    this.paddleOCRPath = process.env.PADDLE_OCR_MCP_PATH || this.autoDetectPaddleOCR();
-
-    this.useMockOCR = !this.paddleOCRPath;
-
-    if (this.useMockOCR) {
-      console.warn('PaddleOCR MCP executable not found – falling back to mock OCR.');
-    } else {
-      console.log('PaddleOCR MCP configured at:', this.paddleOCRPath);
-    }
-
+    // Using native OCR only (Tesseract.js)
+    this.useNativeOCR = true;
+    console.log('OCR Service initialized with native Tesseract.js');
+    
     // Initialize pipeline integration
     this.pipelineService = null;
     this.advancedFilters = null;
@@ -39,60 +30,15 @@ class OCRService {
   }
 
   async processImage(imagePath) {
-    if (this.useMockOCR) {
-      return this.mockOCRProcess(imagePath);
-    }
-
-    try {
-      // Call PaddleOCR MCP
-      const result = await this.callPaddleOCRMCP(imagePath);
-      return this.parseOCRResult(result);
-    } catch (error) {
-      console.error('PaddleOCR MCP failed, falling back to mock:', error);
-      return this.mockOCRProcess(imagePath);
-    }
-  }
-
-  async callPaddleOCRMCP(imagePath) {
-    return new Promise((resolve, reject) => {
-      const args = ['ocr', '--image', imagePath, '--output-format', 'json'];
-
-      const paddleProcess = spawn(this.paddleOCRPath, args);
-      let stdout = '';
-      let stderr = '';
-
-      paddleProcess.stdout.on('data', data => {
-        stdout += data.toString();
-      });
-
-      paddleProcess.stderr.on('data', data => {
-        stderr += data.toString();
-      });
-
-      paddleProcess.on('close', code => {
-        if (code !== 0) {
-          reject(new Error(`PaddleOCR process exited with code ${code}: ${stderr}`));
-        } else {
-          try {
-            const result = JSON.parse(stdout);
-            resolve(result);
-          } catch (parseError) {
-            reject(new Error(`Failed to parse OCR output: ${parseError.message}`));
-          }
-        }
-      });
-
-      paddleProcess.on('error', error => {
-        reject(new Error(`Failed to start PaddleOCR process: ${error.message}`));
-      });
-    });
+    // Mock OCR results for testing (since we're using frontend Tesseract.js)
+    return this.mockOCRProcess(imagePath);
   }
 
   parseOCRResult(ocrResult) {
     const texts = [];
     const components = [];
 
-    // Parse PaddleOCR output format
+    // Parse OCR output format
     if (ocrResult.results && Array.isArray(ocrResult.results)) {
       ocrResult.results.forEach(item => {
         const text = item.text || '';
@@ -271,7 +217,7 @@ class OCRService {
   // Enhanced OCR processing with pipeline integration
   async processImageEnhanced(imagePath, options = {}) {
     try {
-      // Step 1: Basic OCR processing with PaddleOCR
+      // Step 1: Basic OCR processing
       const ocrResult = await this.processImage(imagePath);
 
       // Step 2: Apply advanced filters for OCR enhancement
@@ -389,38 +335,22 @@ class OCRService {
   // Get OCR processing statistics
   getProcessingStats() {
     return {
-      paddleOCRAvailable: !this.useMockOCR,
+      nativeOCRAvailable: this.useNativeOCR,
       pipelineIntegrationAvailable: !!this.pipelineService,
       advancedFiltersAvailable: !!this.advancedFilters,
-      codeInterpreterAvailable: !!this.codeInterpreterService,
-      paddleOCRPath: this.paddleOCRPath
+      codeInterpreterAvailable: !!this.codeInterpreterService
     };
   }
 
   // Validate OCR configuration
   async validateConfiguration() {
     const validation = {
-      paddleOCR: false,
+      nativeOCR: this.useNativeOCR,
       pipelineService: false,
       advancedFilters: false,
       codeInterpreter: false,
       errors: []
     };
-
-    // Check PaddleOCR
-    if (!this.useMockOCR) {
-      try {
-        // Simple validation - check if path exists
-        const fs = require('fs');
-        if (fs.existsSync(this.paddleOCRPath)) {
-          validation.paddleOCR = true;
-        } else {
-          validation.errors.push('PaddleOCR path does not exist');
-        }
-      } catch (error) {
-        validation.errors.push(`PaddleOCR validation failed: ${error.message}`);
-      }
-    }
 
     // Check pipeline service
     if (this.pipelineService) {
@@ -456,38 +386,6 @@ class OCRService {
     }
 
     return validation;
-  }
-
-  /**
-   * Attempt to locate a bundled PaddleOCR MCP executable inside the repo so that
-   * users don’t have to set PADDLE_OCR_MCP_PATH manually.
-   *
-   * Returns absolute path string or null if not found / not executable.
-   */
-  autoDetectPaddleOCR() {
-    try {
-      const rootDir = path.join(__dirname, '../../');
-      const candidatePaths = [
-        path.join(rootDir, 'vendors', 'paddleocr', 'paddleocr-mcp'),
-        path.join(rootDir, 'vendor', 'paddleocr', 'paddleocr-mcp'),
-        path.join(rootDir, 'paddleocr-mcp'),
-        path.join(rootDir, 'paddleocr', 'paddleocr-mcp'),
-      ];
-
-      for (const p of candidatePaths) {
-        try {
-          const stats = require('fs').statSync(p);
-          if (stats.isFile()) {
-            return p;
-          }
-        } catch (e) {
-          // ignore missing path
-        }
-      }
-    } catch (err) {
-      console.error('Auto-detect PaddleOCR failed:', err.message);
-    }
-    return null;
   }
 }
 

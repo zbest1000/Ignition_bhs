@@ -9,7 +9,7 @@ Ignition Layout Studio is a powerful web application that transforms engineering
 ## ✨ Features
 
 - **Multi-Format File Support**: Import DWG/DXF, PDF, PNG, TIFF, JPEG, XLSX/CSV files
-- **OCR Processing**: Extract component labels and equipment IDs using PaddleOCR
+- **OCR Processing**: Extract component labels and equipment IDs using native Tesseract.js
 - **Interactive Canvas Editor**: 
   - Drag-and-drop component manipulation
   - Multi-select with lasso tool
@@ -148,7 +148,9 @@ PORT=5000
 FRONTEND_URL=http://localhost:3000
 NODE_ENV=development
 MAX_FILE_SIZE=100MB
-PADDLE_OCR_MODEL_PATH=./models/paddleocr
+OCR_LANGUAGE=eng
+OCR_CONFIDENCE=0.7
+OCR_PREPROCESSING=true
 ```
 
 ### Project Structure
@@ -212,7 +214,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- PaddleOCR for text extraction capabilities
+- Native Tesseract.js for text extraction capabilities
 - Konva.js for canvas rendering
 - Ant Design for UI components
 - The Ignition SCADA platform by Inductive Automation

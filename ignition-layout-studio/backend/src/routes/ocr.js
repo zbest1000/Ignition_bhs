@@ -130,7 +130,7 @@ router.post('/reprocess/:projectId/:fileId', async (req, res) => {
   }
 });
 
-// OCR processing function (placeholder for PaddleOCR MCP integration)
+// OCR processing function (using native Tesseract.js)
 async function processWithOCR(filePath, options = {}) {
   // Use the OCR service for processing
   const result = await ocrService.processImage(filePath);

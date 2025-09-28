@@ -29,7 +29,9 @@ PORT=5000
 FRONTEND_URL=http://localhost:3000
 NODE_ENV=development
 MAX_FILE_SIZE=100MB
-PADDLE_OCR_MODEL_PATH=./models/paddleocr
+OCR_LANGUAGE=eng
+OCR_CONFIDENCE=0.7
+OCR_PREPROCESSING=true
 "@ | Set-Content .env
     Write-Host ".env file created. Please review and edit as needed."
 } else {

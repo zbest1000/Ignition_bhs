@@ -12,17 +12,18 @@ services:
       - NODE_ENV=production
       - PORT=5000
       - FRONTEND_URL=http://localhost:5000
-      # PaddleOCR MCP configuration (optional)
-      - PADDLE_OCR_MCP_PATH=${PADDLE_OCR_MCP_PATH:-}
-      - PADDLE_OCR_MODEL_PATH=${PADDLE_OCR_MODEL_PATH:-}
+      # OCR configuration
+      - OCR_LANGUAGE=${OCR_LANGUAGE:-eng}
+      - OCR_CONFIDENCE=${OCR_CONFIDENCE:-0.7}
+      - OCR_PREPROCESSING=${OCR_PREPROCESSING:-true}
     volumes:
       # Persist data
       - ./data/uploads:/app/backend/uploads
       - ./data/exports:/app/backend/exports
       - ./data/projects:/app/backend/projects
       - ./data/logs:/app/backend/logs
-      # Optional: Mount PaddleOCR MCP if using local installation
-      # - /path/to/paddleocr-mcp:/usr/local/bin/paddleocr-mcp:ro
+      # Optional: Mount additional OCR models if needed
+      # - /path/to/ocr-models:/app/models:ro
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:5000/api/health"]

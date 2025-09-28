@@ -317,7 +317,7 @@ class PipelineService {
     // OCR Enhancement Pipeline (optimized for OCR processing)
     this.pipelines.set('ocr-enhancement', {
       name: 'OCR Enhancement Pipeline',
-      description: 'Enhance PaddleOCR results with AI interpretation',
+      description: 'Enhance OCR results with AI interpretation',
       providers: ['gemini', 'openai'], // Gemini first for cost-effectiveness
       filters: {
         'pre-process': ['industrial-context'],

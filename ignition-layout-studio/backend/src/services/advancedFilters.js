@@ -10,7 +10,7 @@ class AdvancedFilters {
     // OCR Enhancement Filter
     this.filters.set('ocr-enhancement', {
       name: 'OCR Enhancement Filter',
-      description: 'Enhance PaddleOCR results with AI interpretation',
+      description: 'Enhance OCR results with AI interpretation',
       type: 'post-process',
       process: async (ocrResults, context) => {
         try {
