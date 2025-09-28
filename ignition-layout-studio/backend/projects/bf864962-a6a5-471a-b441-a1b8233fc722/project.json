@@ -1,0 +1,6609 @@
+{
+  "id": "bf864962-a6a5-471a-b441-a1b8233fc722",
+  "name": "cs",
+  "description": "",
+  "createdAt": "2025-07-12T17:00:53.309Z",
+  "updatedAt": "2025-07-12T21:49:21.295Z",
+  "files": [],
+  "components": [
+    {
+      "id": "146e1627-59e2-40fb-be2f-41e3ab1f7074",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_627",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 200,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called Main Line",
+        "generatedAt": "2025-07-12T18:10:36.284Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called Main Line",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836284
+      },
+      "createdAt": "2025-07-12T18:10:36.284Z",
+      "updatedAt": "2025-07-12T18:10:36.284Z"
+    },
+    {
+      "id": "8234d87e-e85c-4791-977c-3449f8cb548f",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_386",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 600,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T18:10:36.285Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836285
+      },
+      "createdAt": "2025-07-12T18:10:36.286Z",
+      "updatedAt": "2025-07-12T18:10:36.286Z"
+    },
+    {
+      "id": "9b9c8a33-057e-4f45-a109-558bf9a9f2cc",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_827",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 940,
+        "y": 180,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T18:10:36.286Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836286
+      },
+      "createdAt": "2025-07-12T18:10:36.287Z",
+      "updatedAt": "2025-07-12T22:12:40.335Z"
+    },
+    {
+      "id": "272b32ae-cc24-4b89-aea1-81baffdf3c06",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_850",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 700,
+        "y": 500,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T18:10:36.289Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836289
+      },
+      "createdAt": "2025-07-12T18:10:36.289Z",
+      "updatedAt": "2025-07-12T18:10:36.289Z"
+    },
+    {
+      "id": "5aba3e9c-068b-415d-9de5-f9a8eac72ef6",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_707",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 600,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T18:10:36.292Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836292
+      },
+      "createdAt": "2025-07-12T18:10:36.293Z",
+      "updatedAt": "2025-07-12T18:10:36.293Z"
+    },
+    {
+      "id": "e0413a22-4f11-4d60-98fd-323272b12cfd",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_292",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 200,
+        "y": 600,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T18:10:36.294Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836294
+      },
+      "createdAt": "2025-07-12T18:10:36.295Z",
+      "updatedAt": "2025-07-12T18:10:36.295Z"
+    },
+    {
+      "id": "02c62418-891b-4eab-988d-73ebbe46a01b",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_652",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 500,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T18:10:36.297Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836297
+      },
+      "createdAt": "2025-07-12T18:10:36.297Z",
+      "updatedAt": "2025-07-12T18:10:36.297Z"
+    },
+    {
+      "id": "720e6e94-6a4b-4ac5-80b1-7ef9c53b24b5",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_782",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 1080,
+        "y": 220,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T18:10:36.298Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836298
+      },
+      "createdAt": "2025-07-12T18:10:36.299Z",
+      "updatedAt": "2025-07-12T18:40:02.257Z"
+    },
+    {
+      "id": "d963fb53-2483-4ef1-8ac9-9a3fa3bca4e2",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_015",
+      "label": "Motor",
+      "geometry": {
+        "x": 360,
+        "y": 60,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op1",
+        "generatedAt": "2025-07-12T18:10:36.300Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836300
+      },
+      "createdAt": "2025-07-12T18:10:36.300Z",
+      "updatedAt": "2025-07-12T18:40:13.166Z"
+    },
+    {
+      "id": "2797ae7b-e55c-48ca-bfec-56b6ffbbfa5b",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_182",
+      "label": "Motor",
+      "geometry": {
+        "x": 420,
+        "y": 240,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op2",
+        "generatedAt": "2025-07-12T18:10:36.302Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836302
+      },
+      "createdAt": "2025-07-12T18:10:36.303Z",
+      "updatedAt": "2025-07-12T18:40:15.127Z"
+    },
+    {
+      "id": "aa8d880f-da87-46e4-8dd3-0e2e8241ed71",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_612",
+      "label": "Motor",
+      "geometry": {
+        "x": 680,
+        "y": 400,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op3",
+        "generatedAt": "2025-07-12T18:10:36.309Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836309
+      },
+      "createdAt": "2025-07-12T18:10:36.309Z",
+      "updatedAt": "2025-07-12T18:10:36.310Z"
+    },
+    {
+      "id": "e152569f-7b2d-4eee-814d-790eac01ba6e",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_224",
+      "label": "Motor",
+      "geometry": {
+        "x": 400,
+        "y": 580,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op4",
+        "generatedAt": "2025-07-12T18:10:36.310Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836310
+      },
+      "createdAt": "2025-07-12T18:10:36.311Z",
+      "updatedAt": "2025-07-12T18:10:36.311Z"
+    },
+    {
+      "id": "fcf6eb87-e057-4b77-a091-9de4202f9091",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_659",
+      "label": "Sensor",
+      "geometry": {
+        "x": 280,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 1",
+        "generatedAt": "2025-07-12T18:10:36.312Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836312
+      },
+      "createdAt": "2025-07-12T18:10:36.313Z",
+      "updatedAt": "2025-07-12T18:10:36.313Z"
+    },
+    {
+      "id": "8e7490c5-04b8-4ec6-b5c4-48baed7c369b",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_386",
+      "label": "Sensor",
+      "geometry": {
+        "x": 480,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 2",
+        "generatedAt": "2025-07-12T18:10:36.315Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836314
+      },
+      "createdAt": "2025-07-12T18:10:36.315Z",
+      "updatedAt": "2025-07-12T18:10:36.315Z"
+    },
+    {
+      "id": "d0bbf31e-1df8-4c2d-a891-bc434a588991",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_548",
+      "label": "Sensor",
+      "geometry": {
+        "x": 660,
+        "y": 380,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 3",
+        "generatedAt": "2025-07-12T18:10:36.316Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836316
+      },
+      "createdAt": "2025-07-12T18:10:36.317Z",
+      "updatedAt": "2025-07-12T18:10:36.317Z"
+    },
+    {
+      "id": "3deca203-1137-4aa8-b0e9-d78882c5a0f6",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_573",
+      "label": "Sensor",
+      "geometry": {
+        "x": 380,
+        "y": 560,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 4",
+        "generatedAt": "2025-07-12T18:10:36.318Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343836318
+      },
+      "createdAt": "2025-07-12T18:10:36.318Z",
+      "updatedAt": "2025-07-12T18:10:36.318Z"
+    },
+    {
+      "id": "711fb5e5-60b2-4532-8144-6ecb3b0ad58f",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_102",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 200,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called Main Line",
+        "generatedAt": "2025-07-12T21:48:53.245Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called Main Line",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933244
+      },
+      "createdAt": "2025-07-12T21:48:53.248Z",
+      "updatedAt": "2025-07-12T21:48:53.248Z"
+    },
+    {
+      "id": "a4e1e821-d3d4-477c-a823-b4008f1dabb2",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_726",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 600,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:48:53.249Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933249
+      },
+      "createdAt": "2025-07-12T21:48:53.249Z",
+      "updatedAt": "2025-07-12T21:48:53.249Z"
+    },
+    {
+      "id": "a7c79557-88c0-45d5-ab65-8ad30ed7a3a3",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_674",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 720,
+        "y": 220,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:48:53.250Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933250
+      },
+      "createdAt": "2025-07-12T21:48:53.250Z",
+      "updatedAt": "2025-07-12T21:49:08.327Z"
+    },
+    {
+      "id": "06807a9f-39ae-4d78-a5fa-717f7198b22f",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_085",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 700,
+        "y": 500,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:48:53.251Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933251
+      },
+      "createdAt": "2025-07-12T21:48:53.252Z",
+      "updatedAt": "2025-07-12T21:48:53.252Z"
+    },
+    {
+      "id": "d0db6ed8-dc11-4f6b-b491-1398e40a2908",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_872",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 600,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:48:53.253Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933252
+      },
+      "createdAt": "2025-07-12T21:48:53.253Z",
+      "updatedAt": "2025-07-12T21:48:53.253Z"
+    },
+    {
+      "id": "03fa6d90-68d1-4035-9d19-fa933e4f1c3f",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_934",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 200,
+        "y": 600,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:48:53.254Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933253
+      },
+      "createdAt": "2025-07-12T21:48:53.254Z",
+      "updatedAt": "2025-07-12T21:48:53.254Z"
+    },
+    {
+      "id": "708d3d77-486f-4d6d-a764-2106e367ccd3",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_324",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 500,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:48:53.257Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933257
+      },
+      "createdAt": "2025-07-12T21:48:53.257Z",
+      "updatedAt": "2025-07-12T21:48:53.257Z"
+    },
+    {
+      "id": "708d9bfa-90e0-4c5d-a742-472b193b039b",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_473",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 100,
+        "y": 300,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:48:53.258Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933258
+      },
+      "createdAt": "2025-07-12T21:48:53.258Z",
+      "updatedAt": "2025-07-12T21:48:53.258Z"
+    },
+    {
+      "id": "a6472fe6-2d4f-44c7-b696-81e520529ac8",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_234",
+      "label": "Motor",
+      "geometry": {
+        "x": 300,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op1",
+        "generatedAt": "2025-07-12T21:48:53.260Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933260
+      },
+      "createdAt": "2025-07-12T21:48:53.260Z",
+      "updatedAt": "2025-07-12T21:48:53.260Z"
+    },
+    {
+      "id": "2ae9ac79-1ee5-4527-8e9e-275c95b467f1",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_283",
+      "label": "Motor",
+      "geometry": {
+        "x": 500,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op2",
+        "generatedAt": "2025-07-12T21:48:53.261Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933261
+      },
+      "createdAt": "2025-07-12T21:48:53.261Z",
+      "updatedAt": "2025-07-12T21:48:53.261Z"
+    },
+    {
+      "id": "440a5d4d-f404-48b7-adf5-83ad0dc1f75f",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_910",
+      "label": "Motor",
+      "geometry": {
+        "x": 680,
+        "y": 400,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op3",
+        "generatedAt": "2025-07-12T21:48:53.261Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933261
+      },
+      "createdAt": "2025-07-12T21:48:53.262Z",
+      "updatedAt": "2025-07-12T21:48:53.262Z"
+    },
+    {
+      "id": "d93ccce1-1551-4284-9578-a45b79d85490",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_673",
+      "label": "Motor",
+      "geometry": {
+        "x": 400,
+        "y": 580,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op4",
+        "generatedAt": "2025-07-12T21:48:53.262Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933262
+      },
+      "createdAt": "2025-07-12T21:48:53.262Z",
+      "updatedAt": "2025-07-12T21:48:53.262Z"
+    },
+    {
+      "id": "f7ab2bb7-7eea-4c57-bb01-8e6752bb54f9",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_457",
+      "label": "Sensor",
+      "geometry": {
+        "x": 280,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 1",
+        "generatedAt": "2025-07-12T21:48:53.263Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933263
+      },
+      "createdAt": "2025-07-12T21:48:53.263Z",
+      "updatedAt": "2025-07-12T21:48:53.263Z"
+    },
+    {
+      "id": "5284b43c-2321-46cc-9b1e-8fd18531c0e4",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_537",
+      "label": "Sensor",
+      "geometry": {
+        "x": 480,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 2",
+        "generatedAt": "2025-07-12T21:48:53.264Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933264
+      },
+      "createdAt": "2025-07-12T21:48:53.264Z",
+      "updatedAt": "2025-07-12T21:48:53.264Z"
+    },
+    {
+      "id": "44cf418c-eb13-4473-bb57-ee1529bb3691",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_531",
+      "label": "Sensor",
+      "geometry": {
+        "x": 660,
+        "y": 380,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 3",
+        "generatedAt": "2025-07-12T21:48:53.265Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933265
+      },
+      "createdAt": "2025-07-12T21:48:53.265Z",
+      "updatedAt": "2025-07-12T21:48:53.265Z"
+    },
+    {
+      "id": "b602ace1-e47f-449e-927a-8b073e8e6431",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_053",
+      "label": "Sensor",
+      "geometry": {
+        "x": 380,
+        "y": 560,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 4",
+        "generatedAt": "2025-07-12T21:48:53.266Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356933266
+      },
+      "createdAt": "2025-07-12T21:48:53.266Z",
+      "updatedAt": "2025-07-12T21:48:53.266Z"
+    },
+    {
+      "id": "24696c77-d423-490a-a29f-491560c00eb2",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_736",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called TC1",
+        "generatedAt": "2025-07-12T21:49:18.729Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called TC1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958729
+      },
+      "createdAt": "2025-07-12T21:49:18.729Z",
+      "updatedAt": "2025-07-12T21:49:18.729Z"
+    },
+    {
+      "id": "3ae8a500-e0aa-4cd2-a44c-31fcae57595f",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_712",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 300,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:18.731Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958731
+      },
+      "createdAt": "2025-07-12T21:49:18.732Z",
+      "updatedAt": "2025-07-12T21:49:18.732Z"
+    },
+    {
+      "id": "ae013cda-bb4c-40ae-baa1-f95bbfb09abb",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_185",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:18.737Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958737
+      },
+      "createdAt": "2025-07-12T21:49:18.739Z",
+      "updatedAt": "2025-07-12T21:49:18.739Z"
+    },
+    {
+      "id": "6830be87-30f9-4b82-8171-4c4d76e5537d",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_160",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 500,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:18.742Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958742
+      },
+      "createdAt": "2025-07-12T21:49:18.743Z",
+      "updatedAt": "2025-07-12T21:49:18.743Z"
+    },
+    {
+      "id": "e53ef054-0f6d-4507-9688-6c5f39eb95a0",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_191",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 500,
+        "y": 100,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called SF1",
+        "generatedAt": "2025-07-12T21:49:18.746Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called SF1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958746
+      },
+      "createdAt": "2025-07-12T21:49:18.748Z",
+      "updatedAt": "2025-07-12T21:49:18.748Z"
+    },
+    {
+      "id": "f1a337a3-e834-4f20-92ff-98c36980b6c9",
+      "type": "merge_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MER_MER_716",
+      "label": "Merge Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 150,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFD700",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "merge junction conveyor called OSR1",
+        "generatedAt": "2025-07-12T21:49:18.751Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "merge_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "merge junction conveyor called OSR1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958750
+      },
+      "createdAt": "2025-07-12T21:49:18.753Z",
+      "updatedAt": "2025-07-12T21:49:18.753Z"
+    },
+    {
+      "id": "cee956b8-69de-4dba-bf65-80bc5f4959f5",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_713",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 350,
+        "y": 300,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "divert conveyor for sorting",
+        "generatedAt": "2025-07-12T21:49:18.756Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "divert conveyor for sorting",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958756
+      },
+      "createdAt": "2025-07-12T21:49:18.758Z",
+      "updatedAt": "2025-07-12T21:49:18.758Z"
+    },
+    {
+      "id": "a30291e7-e087-43d6-9857-ea6a4452eccc",
+      "type": "curve_45_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_945",
+      "label": "45° Curve",
+      "geometry": {
+        "x": 450,
+        "y": 350,
+        "width": 150,
+        "height": 150,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#7FFF7F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "45 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:18.761Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_45_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "45 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958760
+      },
+      "createdAt": "2025-07-12T21:49:18.762Z",
+      "updatedAt": "2025-07-12T21:49:18.763Z"
+    },
+    {
+      "id": "6e7122c3-de75-45ed-9a6e-90c3b7eade88",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_547",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 550,
+        "y": 400,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL1",
+        "generatedAt": "2025-07-12T21:49:18.767Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958767
+      },
+      "createdAt": "2025-07-12T21:49:18.771Z",
+      "updatedAt": "2025-07-12T21:49:18.771Z"
+    },
+    {
+      "id": "5372480e-4f1d-4bb6-805f-782da645d776",
+      "type": "curve_180_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_180_122",
+      "label": "180° Curve",
+      "geometry": {
+        "x": 650,
+        "y": 400,
+        "width": 180,
+        "height": 90,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#5FDD5F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "180 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:18.775Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_180_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "180 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958775
+      },
+      "createdAt": "2025-07-12T21:49:18.776Z",
+      "updatedAt": "2025-07-12T21:49:18.776Z"
+    },
+    {
+      "id": "77f7d81d-7792-48b2-9ba4-f988d4280408",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_689",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 650,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL2",
+        "generatedAt": "2025-07-12T21:49:18.780Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958780
+      },
+      "createdAt": "2025-07-12T21:49:18.784Z",
+      "updatedAt": "2025-07-12T21:49:18.784Z"
+    },
+    {
+      "id": "d0c5b107-a137-41ce-b184-cbc010112b23",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_587",
+      "label": "Motor",
+      "geometry": {
+        "x": 150,
+        "y": 120,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor drive for main system",
+        "generatedAt": "2025-07-12T21:49:18.787Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor drive for main system",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958787
+      },
+      "createdAt": "2025-07-12T21:49:18.788Z",
+      "updatedAt": "2025-07-12T21:49:18.788Z"
+    },
+    {
+      "id": "bedbd00e-0a99-409d-8f93-bd381748c9de",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_203",
+      "label": "Sensor",
+      "geometry": {
+        "x": 250,
+        "y": 180,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector for baggage presence",
+        "generatedAt": "2025-07-12T21:49:18.796Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector for baggage presence",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958796
+      },
+      "createdAt": "2025-07-12T21:49:18.798Z",
+      "updatedAt": "2025-07-12T21:49:18.798Z"
+    },
+    {
+      "id": "36f9adc0-c0da-46d2-bd70-7034894f3586",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_950",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 280,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "diverter gate for routing",
+        "generatedAt": "2025-07-12T21:49:18.802Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "diverter gate for routing",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958802
+      },
+      "createdAt": "2025-07-12T21:49:18.806Z",
+      "updatedAt": "2025-07-12T21:49:18.806Z"
+    },
+    {
+      "id": "ff848742-17d3-4da9-806d-7b1900cfe3d9",
+      "type": "sortation",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SOR_SOR_440",
+      "label": "Sortation",
+      "geometry": {
+        "x": 500,
+        "y": 450,
+        "width": 180,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FF6347",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sortation system for packages",
+        "generatedAt": "2025-07-12T21:49:18.839Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sortation",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sortation system for packages",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356958838
+      },
+      "createdAt": "2025-07-12T21:49:18.841Z",
+      "updatedAt": "2025-07-12T21:49:18.841Z"
+    },
+    {
+      "id": "6cae2dd5-66fc-4d86-839c-faa8a48e57f8",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_730",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 200,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called Main Line",
+        "generatedAt": "2025-07-12T21:49:19.646Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called Main Line",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959646
+      },
+      "createdAt": "2025-07-12T21:49:19.647Z",
+      "updatedAt": "2025-07-12T21:49:19.647Z"
+    },
+    {
+      "id": "6f6e33df-e6a1-46b0-96ee-e50b6d60f8c0",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_875",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 600,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.648Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959648
+      },
+      "createdAt": "2025-07-12T21:49:19.648Z",
+      "updatedAt": "2025-07-12T21:49:19.648Z"
+    },
+    {
+      "id": "a8ea48c3-bba6-4e1e-b3aa-5541f225b56b",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_458",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 700,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:19.648Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959648
+      },
+      "createdAt": "2025-07-12T21:49:19.649Z",
+      "updatedAt": "2025-07-12T21:49:19.649Z"
+    },
+    {
+      "id": "377fcfec-c608-4daf-96da-98bf8e219a89",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_702",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 700,
+        "y": 500,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.651Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959651
+      },
+      "createdAt": "2025-07-12T21:49:19.651Z",
+      "updatedAt": "2025-07-12T21:49:19.651Z"
+    },
+    {
+      "id": "a4db940e-b038-450b-92d0-aab0cc74fe76",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_533",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 600,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:19.651Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959651
+      },
+      "createdAt": "2025-07-12T21:49:19.654Z",
+      "updatedAt": "2025-07-12T21:49:19.654Z"
+    },
+    {
+      "id": "76abf57d-3c73-4a1f-b41c-d9e48e256416",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_383",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 200,
+        "y": 600,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.658Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959658
+      },
+      "createdAt": "2025-07-12T21:49:19.658Z",
+      "updatedAt": "2025-07-12T21:49:19.658Z"
+    },
+    {
+      "id": "3e5edade-c5e3-43ee-a623-705745929089",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_384",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 500,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:19.669Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959669
+      },
+      "createdAt": "2025-07-12T21:49:19.670Z",
+      "updatedAt": "2025-07-12T21:49:19.670Z"
+    },
+    {
+      "id": "1e5ebea3-1ab2-4a94-b717-bc29d92baff1",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_474",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 100,
+        "y": 300,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.671Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959671
+      },
+      "createdAt": "2025-07-12T21:49:19.671Z",
+      "updatedAt": "2025-07-12T21:49:19.671Z"
+    },
+    {
+      "id": "b9f0b62e-b4d6-4363-ac04-01a0b134b85a",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_895",
+      "label": "Motor",
+      "geometry": {
+        "x": 300,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op1",
+        "generatedAt": "2025-07-12T21:49:19.673Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959673
+      },
+      "createdAt": "2025-07-12T21:49:19.675Z",
+      "updatedAt": "2025-07-12T21:49:19.675Z"
+    },
+    {
+      "id": "e774a7a4-0631-4e55-a12d-9a33effaab3d",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_209",
+      "label": "Motor",
+      "geometry": {
+        "x": 500,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op2",
+        "generatedAt": "2025-07-12T21:49:19.677Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959677
+      },
+      "createdAt": "2025-07-12T21:49:19.677Z",
+      "updatedAt": "2025-07-12T21:49:19.677Z"
+    },
+    {
+      "id": "ffa4c2cd-a9eb-488c-8c17-16831b9c9365",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_067",
+      "label": "Motor",
+      "geometry": {
+        "x": 680,
+        "y": 400,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op3",
+        "generatedAt": "2025-07-12T21:49:19.680Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959680
+      },
+      "createdAt": "2025-07-12T21:49:19.681Z",
+      "updatedAt": "2025-07-12T21:49:19.681Z"
+    },
+    {
+      "id": "114c3907-3a4a-4cd2-8665-c8da7fd8ba05",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_299",
+      "label": "Motor",
+      "geometry": {
+        "x": 400,
+        "y": 580,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op4",
+        "generatedAt": "2025-07-12T21:49:19.682Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959682
+      },
+      "createdAt": "2025-07-12T21:49:19.682Z",
+      "updatedAt": "2025-07-12T21:49:19.682Z"
+    },
+    {
+      "id": "1714a831-9509-45d9-9383-82db1e9e4c31",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_440",
+      "label": "Sensor",
+      "geometry": {
+        "x": 280,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 1",
+        "generatedAt": "2025-07-12T21:49:19.683Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959683
+      },
+      "createdAt": "2025-07-12T21:49:19.684Z",
+      "updatedAt": "2025-07-12T21:49:19.684Z"
+    },
+    {
+      "id": "c848e146-1790-428e-bda1-c4e44c2a2465",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_710",
+      "label": "Sensor",
+      "geometry": {
+        "x": 480,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 2",
+        "generatedAt": "2025-07-12T21:49:19.686Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959685
+      },
+      "createdAt": "2025-07-12T21:49:19.686Z",
+      "updatedAt": "2025-07-12T21:49:19.686Z"
+    },
+    {
+      "id": "a6f7c44b-8d42-41f8-bdf0-c9412545bbc8",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_081",
+      "label": "Sensor",
+      "geometry": {
+        "x": 660,
+        "y": 380,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 3",
+        "generatedAt": "2025-07-12T21:49:19.687Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959687
+      },
+      "createdAt": "2025-07-12T21:49:19.688Z",
+      "updatedAt": "2025-07-12T21:49:19.688Z"
+    },
+    {
+      "id": "855e9e5e-1a20-4f7e-8bc2-8baadc15d554",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_754",
+      "label": "Sensor",
+      "geometry": {
+        "x": 380,
+        "y": 560,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 4",
+        "generatedAt": "2025-07-12T21:49:19.688Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959688
+      },
+      "createdAt": "2025-07-12T21:49:19.689Z",
+      "updatedAt": "2025-07-12T21:49:19.689Z"
+    },
+    {
+      "id": "a379dd8d-1b42-4503-ae73-41948fd0a9a3",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_403",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called TC1",
+        "generatedAt": "2025-07-12T21:49:19.914Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called TC1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959914
+      },
+      "createdAt": "2025-07-12T21:49:19.914Z",
+      "updatedAt": "2025-07-12T21:49:19.914Z"
+    },
+    {
+      "id": "1974407f-1687-4b73-b436-3337d2554995",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_711",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 300,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.915Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959915
+      },
+      "createdAt": "2025-07-12T21:49:19.915Z",
+      "updatedAt": "2025-07-12T21:49:19.915Z"
+    },
+    {
+      "id": "c934b583-8d55-4bbe-9b16-77ea592bc541",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_501",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:19.915Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959915
+      },
+      "createdAt": "2025-07-12T21:49:19.915Z",
+      "updatedAt": "2025-07-12T21:49:19.915Z"
+    },
+    {
+      "id": "ba2ab72f-ee79-4ebf-b6d1-fc668c1654ae",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_253",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 500,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.916Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959916
+      },
+      "createdAt": "2025-07-12T21:49:19.916Z",
+      "updatedAt": "2025-07-12T21:49:19.916Z"
+    },
+    {
+      "id": "d9325eac-06cb-4674-9c03-66922077cea1",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_695",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 500,
+        "y": 100,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called SF1",
+        "generatedAt": "2025-07-12T21:49:19.917Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called SF1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959916
+      },
+      "createdAt": "2025-07-12T21:49:19.917Z",
+      "updatedAt": "2025-07-12T21:49:19.917Z"
+    },
+    {
+      "id": "c47ddf15-8ca4-4b4d-a2fa-ae8bcf4f23b1",
+      "type": "merge_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MER_MER_956",
+      "label": "Merge Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 150,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFD700",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "merge junction conveyor called OSR1",
+        "generatedAt": "2025-07-12T21:49:19.917Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "merge_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "merge junction conveyor called OSR1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959917
+      },
+      "createdAt": "2025-07-12T21:49:19.917Z",
+      "updatedAt": "2025-07-12T21:49:19.917Z"
+    },
+    {
+      "id": "5e5955e6-07a9-459a-9c94-28efcb43a7b1",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_834",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 350,
+        "y": 300,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "divert conveyor for sorting",
+        "generatedAt": "2025-07-12T21:49:19.918Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "divert conveyor for sorting",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959917
+      },
+      "createdAt": "2025-07-12T21:49:19.918Z",
+      "updatedAt": "2025-07-12T21:49:19.918Z"
+    },
+    {
+      "id": "42538a5e-7385-4956-9da2-fe3850563e46",
+      "type": "curve_45_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_242",
+      "label": "45° Curve",
+      "geometry": {
+        "x": 450,
+        "y": 350,
+        "width": 150,
+        "height": 150,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#7FFF7F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "45 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.919Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_45_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "45 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959919
+      },
+      "createdAt": "2025-07-12T21:49:19.919Z",
+      "updatedAt": "2025-07-12T21:49:19.919Z"
+    },
+    {
+      "id": "bfb7c85a-bc18-4e76-8491-62a05a12e6f6",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_146",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 550,
+        "y": 400,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL1",
+        "generatedAt": "2025-07-12T21:49:19.923Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959923
+      },
+      "createdAt": "2025-07-12T21:49:19.924Z",
+      "updatedAt": "2025-07-12T21:49:19.924Z"
+    },
+    {
+      "id": "19081772-7b69-4c0a-a897-5c143f301426",
+      "type": "curve_180_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_180_225",
+      "label": "180° Curve",
+      "geometry": {
+        "x": 650,
+        "y": 400,
+        "width": 180,
+        "height": 90,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#5FDD5F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "180 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:19.925Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_180_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "180 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959925
+      },
+      "createdAt": "2025-07-12T21:49:19.925Z",
+      "updatedAt": "2025-07-12T21:49:19.925Z"
+    },
+    {
+      "id": "bd5c8c40-f583-41d6-a653-a04c5180ee49",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_976",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 650,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL2",
+        "generatedAt": "2025-07-12T21:49:19.925Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959925
+      },
+      "createdAt": "2025-07-12T21:49:19.926Z",
+      "updatedAt": "2025-07-12T21:49:19.926Z"
+    },
+    {
+      "id": "79205ee2-9395-40a0-b412-79ba37c3b668",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_729",
+      "label": "Motor",
+      "geometry": {
+        "x": 150,
+        "y": 120,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor drive for main system",
+        "generatedAt": "2025-07-12T21:49:19.926Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor drive for main system",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959926
+      },
+      "createdAt": "2025-07-12T21:49:19.926Z",
+      "updatedAt": "2025-07-12T21:49:19.926Z"
+    },
+    {
+      "id": "1f5ee1a6-835c-41f8-9d9a-1cbd84db219d",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_561",
+      "label": "Sensor",
+      "geometry": {
+        "x": 250,
+        "y": 180,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector for baggage presence",
+        "generatedAt": "2025-07-12T21:49:19.927Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector for baggage presence",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959927
+      },
+      "createdAt": "2025-07-12T21:49:19.927Z",
+      "updatedAt": "2025-07-12T21:49:19.927Z"
+    },
+    {
+      "id": "ee9cbb58-41e0-4b81-8e59-61a0e7114abd",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_062",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 280,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "diverter gate for routing",
+        "generatedAt": "2025-07-12T21:49:19.928Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "diverter gate for routing",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959928
+      },
+      "createdAt": "2025-07-12T21:49:19.928Z",
+      "updatedAt": "2025-07-12T21:49:19.928Z"
+    },
+    {
+      "id": "33538a74-4879-411f-8b24-23281e933205",
+      "type": "sortation",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SOR_SOR_251",
+      "label": "Sortation",
+      "geometry": {
+        "x": 500,
+        "y": 450,
+        "width": 180,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FF6347",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sortation system for packages",
+        "generatedAt": "2025-07-12T21:49:19.929Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sortation",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sortation system for packages",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356959929
+      },
+      "createdAt": "2025-07-12T21:49:19.929Z",
+      "updatedAt": "2025-07-12T21:49:19.929Z"
+    },
+    {
+      "id": "f7f8bc0b-5adb-4925-8b51-d5fe24f2c559",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_563",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called TC1",
+        "generatedAt": "2025-07-12T21:49:20.118Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called TC1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960118
+      },
+      "createdAt": "2025-07-12T21:49:20.125Z",
+      "updatedAt": "2025-07-12T21:49:20.125Z"
+    },
+    {
+      "id": "d248be66-ab62-4113-86e7-9e6784257a44",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_712",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 300,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:20.134Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960134
+      },
+      "createdAt": "2025-07-12T21:49:20.134Z",
+      "updatedAt": "2025-07-12T21:49:20.134Z"
+    },
+    {
+      "id": "a4f4ccad-ce91-4b84-b7f3-ac23e8e43cc5",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_606",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:20.135Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960135
+      },
+      "createdAt": "2025-07-12T21:49:20.137Z",
+      "updatedAt": "2025-07-12T21:49:20.137Z"
+    },
+    {
+      "id": "9cb3dfd9-85a4-42ea-bfa5-b968c4903b5c",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_508",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 500,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:20.162Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960162
+      },
+      "createdAt": "2025-07-12T21:49:20.169Z",
+      "updatedAt": "2025-07-12T21:49:20.169Z"
+    },
+    {
+      "id": "deb9864f-7857-4d42-9f13-85fc7b9a5567",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_066",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 500,
+        "y": 100,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called SF1",
+        "generatedAt": "2025-07-12T21:49:20.184Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called SF1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960184
+      },
+      "createdAt": "2025-07-12T21:49:20.193Z",
+      "updatedAt": "2025-07-12T21:49:20.195Z"
+    },
+    {
+      "id": "72261cb3-452d-40aa-a01a-cc801fe7446f",
+      "type": "merge_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MER_MER_431",
+      "label": "Merge Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 150,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFD700",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "merge junction conveyor called OSR1",
+        "generatedAt": "2025-07-12T21:49:20.205Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "merge_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "merge junction conveyor called OSR1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960205
+      },
+      "createdAt": "2025-07-12T21:49:20.207Z",
+      "updatedAt": "2025-07-12T21:49:20.207Z"
+    },
+    {
+      "id": "e8db9198-185e-40f2-ba1d-fa0eb3fa1843",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_191",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 40,
+        "y": 300,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "divert conveyor for sorting",
+        "generatedAt": "2025-07-12T21:49:20.214Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "divert conveyor for sorting",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960214
+      },
+      "createdAt": "2025-07-12T21:49:20.214Z",
+      "updatedAt": "2025-07-12T22:17:05.919Z"
+    },
+    {
+      "id": "526335a9-90c5-41e0-b6ea-f7dbc86656d7",
+      "type": "curve_45_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_286",
+      "label": "45° Curve",
+      "geometry": {
+        "x": 450,
+        "y": 350,
+        "width": 150,
+        "height": 150,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#7FFF7F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "45 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:20.218Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_45_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "45 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960218
+      },
+      "createdAt": "2025-07-12T21:49:20.221Z",
+      "updatedAt": "2025-07-12T21:49:20.221Z"
+    },
+    {
+      "id": "fc62d26f-b019-404e-8173-4d643cacbc20",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_652",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 550,
+        "y": 400,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL1",
+        "generatedAt": "2025-07-12T21:49:20.225Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960225
+      },
+      "createdAt": "2025-07-12T21:49:20.226Z",
+      "updatedAt": "2025-07-12T21:49:20.226Z"
+    },
+    {
+      "id": "05da0834-00ba-423f-b272-bb621a44bcac",
+      "type": "curve_180_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_180_429",
+      "label": "180° Curve",
+      "geometry": {
+        "x": 650,
+        "y": 400,
+        "width": 180,
+        "height": 90,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#5FDD5F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "180 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:20.228Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_180_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "180 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960228
+      },
+      "createdAt": "2025-07-12T21:49:20.230Z",
+      "updatedAt": "2025-07-12T21:49:20.230Z"
+    },
+    {
+      "id": "e7292a74-71d8-4b2d-8e27-825095d14358",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_670",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 650,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL2",
+        "generatedAt": "2025-07-12T21:49:20.240Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960240
+      },
+      "createdAt": "2025-07-12T21:49:20.244Z",
+      "updatedAt": "2025-07-12T21:49:20.244Z"
+    },
+    {
+      "id": "3a1ef5f0-921e-4e3c-b777-c1a1177044c0",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_932",
+      "label": "Motor",
+      "geometry": {
+        "x": 150,
+        "y": 120,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor drive for main system",
+        "generatedAt": "2025-07-12T21:49:20.257Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor drive for main system",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960257
+      },
+      "createdAt": "2025-07-12T21:49:20.261Z",
+      "updatedAt": "2025-07-12T21:49:20.262Z"
+    },
+    {
+      "id": "9db7b618-0797-4e69-bb53-c122d0417821",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_313",
+      "label": "Sensor",
+      "geometry": {
+        "x": 250,
+        "y": 180,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector for baggage presence",
+        "generatedAt": "2025-07-12T21:49:20.277Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector for baggage presence",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960277
+      },
+      "createdAt": "2025-07-12T21:49:20.283Z",
+      "updatedAt": "2025-07-12T21:49:20.283Z"
+    },
+    {
+      "id": "7b68f39b-d3fb-4bdb-99ad-18264d54e798",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_200",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 1100,
+        "y": 480,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "diverter gate for routing",
+        "generatedAt": "2025-07-12T21:49:20.287Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "diverter gate for routing",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960287
+      },
+      "createdAt": "2025-07-12T21:49:20.289Z",
+      "updatedAt": "2025-07-12T22:17:03.570Z"
+    },
+    {
+      "id": "7492affa-d339-483c-9e73-9fb32aa1c625",
+      "type": "sortation",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SOR_SOR_456",
+      "label": "Sortation",
+      "geometry": {
+        "x": 500,
+        "y": 450,
+        "width": 180,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FF6347",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sortation system for packages",
+        "generatedAt": "2025-07-12T21:49:20.291Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sortation",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sortation system for packages",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356960291
+      },
+      "createdAt": "2025-07-12T21:49:20.292Z",
+      "updatedAt": "2025-07-12T21:49:20.292Z"
+    },
+    {
+      "id": "fce61ee4-2b9e-4c03-82fb-86360a016883",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_689",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called TC1",
+        "generatedAt": "2025-07-12T21:49:21.143Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called TC1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961143
+      },
+      "createdAt": "2025-07-12T21:49:21.150Z",
+      "updatedAt": "2025-07-12T21:49:21.150Z"
+    },
+    {
+      "id": "34f6559f-7817-4778-9fc4-6356374bbea4",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_278",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 300,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:21.156Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961156
+      },
+      "createdAt": "2025-07-12T21:49:21.156Z",
+      "updatedAt": "2025-07-12T21:49:21.156Z"
+    },
+    {
+      "id": "bac2db92-67cf-4044-9d47-d42e2ab60e9e",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_505",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 400,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T21:49:21.158Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961158
+      },
+      "createdAt": "2025-07-12T21:49:21.158Z",
+      "updatedAt": "2025-07-12T21:49:21.158Z"
+    },
+    {
+      "id": "05038972-eb9c-4fc0-93eb-fd54d7d740c8",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_429",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 500,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:21.160Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961160
+      },
+      "createdAt": "2025-07-12T21:49:21.162Z",
+      "updatedAt": "2025-07-12T21:49:21.162Z"
+    },
+    {
+      "id": "7ca8b35d-e520-410d-a0a7-32fd6d423336",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_669",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 500,
+        "y": 100,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called SF1",
+        "generatedAt": "2025-07-12T21:49:21.165Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called SF1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961165
+      },
+      "createdAt": "2025-07-12T21:49:21.169Z",
+      "updatedAt": "2025-07-12T21:49:21.169Z"
+    },
+    {
+      "id": "4055c1fc-7e63-4470-b204-72d387790e8d",
+      "type": "merge_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MER_MER_805",
+      "label": "Merge Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 150,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFD700",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "merge junction conveyor called OSR1",
+        "generatedAt": "2025-07-12T21:49:21.176Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "merge_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "merge junction conveyor called OSR1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961176
+      },
+      "createdAt": "2025-07-12T21:49:21.180Z",
+      "updatedAt": "2025-07-12T21:49:21.180Z"
+    },
+    {
+      "id": "081662e4-1948-43ef-91de-2d61d5b7c61f",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_558",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 840,
+        "y": 480,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "divert conveyor for sorting",
+        "generatedAt": "2025-07-12T21:49:21.193Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "divert conveyor for sorting",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961193
+      },
+      "createdAt": "2025-07-12T21:49:21.200Z",
+      "updatedAt": "2025-07-12T22:17:00.278Z"
+    },
+    {
+      "id": "adf6c576-2d12-4a83-855e-14d0573b87d9",
+      "type": "curve_45_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_239",
+      "label": "45° Curve",
+      "geometry": {
+        "x": 450,
+        "y": 350,
+        "width": 150,
+        "height": 150,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#7FFF7F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "45 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:21.211Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_45_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "45 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961211
+      },
+      "createdAt": "2025-07-12T21:49:21.219Z",
+      "updatedAt": "2025-07-12T21:49:21.219Z"
+    },
+    {
+      "id": "e4190859-7ff1-479b-8238-b9bbac0d9598",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_399",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 550,
+        "y": 400,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL1",
+        "generatedAt": "2025-07-12T21:49:21.232Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961231
+      },
+      "createdAt": "2025-07-12T21:49:21.236Z",
+      "updatedAt": "2025-07-12T21:49:21.236Z"
+    },
+    {
+      "id": "51e36e48-76d6-4e9a-9dc0-d1c9bc9986b3",
+      "type": "curve_180_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_180_345",
+      "label": "180° Curve",
+      "geometry": {
+        "x": 1300,
+        "y": 200,
+        "width": 180,
+        "height": 90,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#5FDD5F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "180 degree curve conveyor",
+        "generatedAt": "2025-07-12T21:49:21.242Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_180_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "180 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961242
+      },
+      "createdAt": "2025-07-12T21:49:21.246Z",
+      "updatedAt": "2025-07-12T22:48:16.790Z"
+    },
+    {
+      "id": "d615742f-2e14-413f-90aa-99d61c121a45",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_298",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 650,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called CL2",
+        "generatedAt": "2025-07-12T21:49:21.252Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called CL2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961252
+      },
+      "createdAt": "2025-07-12T21:49:21.254Z",
+      "updatedAt": "2025-07-12T21:49:21.255Z"
+    },
+    {
+      "id": "ee8539e6-0b9a-4645-b85e-f763bd91b783",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_333",
+      "label": "Motor",
+      "geometry": {
+        "x": 150,
+        "y": 120,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor drive for main system",
+        "generatedAt": "2025-07-12T21:49:21.258Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor drive for main system",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961258
+      },
+      "createdAt": "2025-07-12T21:49:21.263Z",
+      "updatedAt": "2025-07-12T21:49:21.263Z"
+    },
+    {
+      "id": "b02f6752-589a-4539-8662-9466d10572b6",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_130",
+      "label": "Sensor",
+      "geometry": {
+        "x": 250,
+        "y": 180,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector for baggage presence",
+        "generatedAt": "2025-07-12T21:49:21.270Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector for baggage presence",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961270
+      },
+      "createdAt": "2025-07-12T21:49:21.271Z",
+      "updatedAt": "2025-07-12T21:49:21.271Z"
+    },
+    {
+      "id": "579bab76-1fbb-46eb-a21e-99b5cfae5503",
+      "type": "divert_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "DIV_DIV_883",
+      "label": "Divert Conveyor",
+      "geometry": {
+        "x": 1040,
+        "y": 300,
+        "width": 150,
+        "height": 100,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFA500",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "diverter gate for routing",
+        "generatedAt": "2025-07-12T21:49:21.275Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "divert_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "diverter gate for routing",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961275
+      },
+      "createdAt": "2025-07-12T21:49:21.279Z",
+      "updatedAt": "2025-07-12T22:16:58.142Z"
+    },
+    {
+      "id": "b688dc9e-fc3a-4c41-a552-e6ec7b84ccc8",
+      "type": "sortation",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SOR_SOR_115",
+      "label": "Sortation",
+      "geometry": {
+        "x": 500,
+        "y": 450,
+        "width": 180,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FF6347",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sortation system for packages",
+        "generatedAt": "2025-07-12T21:49:21.288Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sortation",
+        "generationType": "fast-mock",
+        "systemLayout": "Airport Baggage System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sortation system for packages",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752356961288
+      },
+      "createdAt": "2025-07-12T21:49:21.295Z",
+      "updatedAt": "2025-07-12T21:49:21.295Z"
+    }
+  ],
+  "templates": [],
+  "layers": [],
+  "settings": {
+    "gridSize": 10,
+    "snapToGrid": true,
+    "showLabels": true,
+    "units": "inches"
+  },
+  "metadata": {},
+  "tagMappings": {},
+  "exportHistory": []
+}

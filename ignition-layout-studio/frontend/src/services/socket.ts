@@ -46,10 +46,7 @@ class SocketService {
     this.socket.emit('join-project', projectId);
   }
 
-  on<K extends keyof SocketEvents>(
-    event: K,
-    callback: SocketEvents[K]
-  ): void {
+  on<K extends keyof SocketEvents>(event: K, callback: SocketEvents[K]): void {
     if (!this.socket) {
       console.warn('Socket not initialized');
       return;
@@ -65,10 +62,7 @@ class SocketService {
     this.socket.on(event, callback as any);
   }
 
-  off<K extends keyof SocketEvents>(
-    event: K,
-    callback: SocketEvents[K]
-  ): void {
+  off<K extends keyof SocketEvents>(event: K, callback: SocketEvents[K]): void {
     if (!this.socket) {
       return;
     }
@@ -93,4 +87,5 @@ class SocketService {
   }
 }
 
-export default new SocketService();
+const socketService = new SocketService();
+export default socketService;

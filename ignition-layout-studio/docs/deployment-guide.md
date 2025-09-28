@@ -1,137 +1,211 @@
 # Deployment Guide
 
-This guide covers various deployment options for Ignition Layout Studio.
+This guide covers deploying the Ignition Layout Studio with all advanced features including database integration, authentication, and performance monitoring.
 
-## Table of Contents
-1. [Development Deployment](#development-deployment)
-2. [Docker Deployment](#docker-deployment)
-3. [Production Deployment](#production-deployment)
-4. [Windows Deployment](#windows-deployment)
-5. [Cloud Deployment](#cloud-deployment)
-6. [Configuration](#configuration)
-7. [Security](#security)
-8. [Monitoring](#monitoring)
+## Prerequisites
 
-## Development Deployment
+- Node.js 18+ and npm
+- PostgreSQL 14+
+- Python 3.9+
+- Docker (optional)
+- Git
 
-### Quick Start
+## Environment Setup
+
+### 1. Database Setup
+
+#### PostgreSQL Installation
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# macOS
+brew install postgresql
+
+# Windows
+# Download and install from https://www.postgresql.org/download/windows/
+```
+
+#### Database Configuration
+```bash
+# Create database and user
+sudo -u postgres psql
+CREATE DATABASE ignition_layout_studio;
+CREATE USER ignition_user WITH PASSWORD 'secure_password';
+GRANT ALL PRIVILEGES ON DATABASE ignition_layout_studio TO ignition_user;
+\q
+```
+
+### 2. Environment Variables
+
+Create `.env` file in the backend directory:
+
+```env
+# Server Configuration
+NODE_ENV=production
+PORT=3001
+FRONTEND_URL=https://your-domain.com
+ALLOWED_ORIGINS=https://your-domain.com
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=ignition_user
+DB_PASSWORD=secure_password
+DB_NAME=ignition_layout_studio
+DB_SSL=true
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-min-32-chars
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_SECRET=your-refresh-secret-min-32-chars
+JWT_REFRESH_EXPIRES_IN=30d
+
+# AI Service Configuration
+OPENAI_API_KEY=your-openai-api-key
+ANTHROPIC_API_KEY=your-anthropic-api-key
+AI_PROVIDER=openai
+AI_MODEL=gpt-4
+
+# Performance Monitoring
+ENABLE_PERFORMANCE_MONITORING=true
+PERFORMANCE_ALERT_THRESHOLD_RESPONSE_TIME=2000
+PERFORMANCE_ALERT_THRESHOLD_ERROR_RATE=0.05
+
+# Security Configuration
+BCRYPT_ROUNDS=12
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+HELMET_ENABLED=true
+
+# Logging Configuration
+LOG_LEVEL=info
+LOG_FILE=./logs/app.log
+```
+
+## Deployment Methods
+
+### Method 1: Docker Deployment (Recommended)
+
+#### 1. Build and Run with Docker Compose
 ```bash
 # Clone repository
 git clone https://github.com/your-org/ignition-layout-studio.git
 cd ignition-layout-studio
 
-# Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+# Create environment file
+cp .env.template .env
+# Edit .env with your configuration
 
-# Start development servers
-# Terminal 1 - Backend
-cd backend && npm start
-
-# Terminal 2 - Frontend
-cd frontend && npm start
-```
-
-### Development URLs
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-- WebSocket: ws://localhost:5000
-
-## Docker Deployment
-
-### Using Docker Compose
-
-1. **Basic deployment**:
-```bash
-# Build and start
+# Build and start services
 docker-compose up -d
 
-# View logs
+# Check status
+docker-compose ps
 docker-compose logs -f
-
-# Stop services
-docker-compose down
 ```
 
-2. **Production deployment with nginx**:
+#### 2. Docker Compose Configuration
+```yaml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: ignition_layout_studio
+      POSTGRES_USER: ignition_user
+      POSTGRES_PASSWORD: secure_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  backend:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./frontend/build:/usr/share/nginx/html
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+```
+
+### Method 2: Manual Deployment
+
+#### 1. Backend Setup
 ```bash
-# Start with production profile
-docker-compose --profile production up -d
+# Navigate to backend directory
+cd backend
+
+# Install dependencies
+npm ci --production
+
+# Run database migrations
+npm run db:migrate
+
+# Start backend server
+npm start
 ```
 
-### Building Docker Image
-
+#### 2. Frontend Setup
 ```bash
-# Build image
-docker build -t ignition-layout-studio:latest .
-
-# Run container
-docker run -d \
-  -p 5000:5000 \
-  -v $(pwd)/data:/app/data \
-  --name ignition-studio \
-  ignition-layout-studio:latest
-```
-
-### Docker Environment Variables
-
-Create `.env` file:
-```env
-NODE_ENV=production
-PORT=5000
-FRONTEND_URL=http://your-domain.com
-PADDLE_OCR_MCP_PATH=/usr/local/bin/paddleocr-mcp
-```
-
-## Production Deployment
-
-### Prerequisites
-- Node.js 16+ 
-- PM2 (process manager)
-- Nginx (reverse proxy)
-- SSL certificates
-
-### Step 1: Build Frontend
-```bash
+# Navigate to frontend directory
 cd frontend
+
+# Install dependencies
+npm ci
+
+# Build for production
 npm run build
+
+# Serve with nginx or serve
+npx serve -s build -l 3000
 ```
 
-### Step 2: Setup PM2
+#### 3. Process Management with PM2
 ```bash
-# Install PM2
+# Install PM2 globally
 npm install -g pm2
 
-# Create ecosystem file
-cat > ecosystem.config.js << EOF
-module.exports = {
-  apps: [{
-    name: 'ignition-studio',
-    script: './backend/src/server.js',
-    instances: 'max',
-    exec_mode: 'cluster',
-    env: {
-      NODE_ENV: 'production',
-      PORT: 5000
-    },
-    error_file: './logs/err.log',
-    out_file: './logs/out.log',
-    log_file: './logs/combined.log',
-    time: true
-  }]
-}
-EOF
+# Start backend with PM2
+cd backend
+pm2 start src/server.js --name "ignition-backend"
 
-# Start application
-pm2 start ecosystem.config.js
+# Start frontend with PM2
+cd ../frontend
+pm2 serve build 3000 --name "ignition-frontend"
 
 # Save PM2 configuration
 pm2 save
 pm2 startup
 ```
 
-### Step 3: Configure Nginx
+## Production Configuration
 
+### 1. Nginx Configuration
 ```nginx
 server {
     listen 80;
@@ -143,355 +217,306 @@ server {
     listen 443 ssl http2;
     server_name your-domain.com;
 
-    ssl_certificate /path/to/cert.pem;
-    ssl_certificate_key /path/to/key.pem;
+    ssl_certificate /etc/nginx/ssl/cert.pem;
+    ssl_certificate_key /etc/nginx/ssl/key.pem;
 
+    # Frontend
     location / {
-        proxy_pass http://localhost:5000;
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Backend API
+    location /api {
+        proxy_pass http://backend:3001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_cache_bypass $http_upgrade;
+    }
+
+    # WebSocket support
+    location /socket.io {
+        proxy_pass http://backend:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
 ```
 
-### Step 4: Enable and Start Services
-```bash
-# Reload nginx
-sudo nginx -s reload
-
-# Check PM2 status
-pm2 status
-```
-
-## Windows Deployment
-
-### Using Node.js
-
-1. **Install Node.js** from nodejs.org
-
-2. **Setup as Windows Service**:
-```powershell
-# Install node-windows
-npm install -g node-windows
-
-# Create service script
-node install-windows-service.js
-```
-
-3. **Configure IIS** (optional):
-   - Install IIS with URL Rewrite module
-   - Configure reverse proxy to Node.js application
-
-### Using Docker Desktop
-
-1. Install Docker Desktop for Windows
-2. Use same Docker commands as Linux deployment
-
-## Cloud Deployment
-
-### AWS EC2
-
-1. **Launch EC2 Instance**:
-   - Ubuntu 20.04 LTS
-   - t3.medium or larger
-   - Security group: ports 80, 443, 22
-
-2. **Install Dependencies**:
-```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
-
-# Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Install nginx
-sudo apt install nginx -y
-
-# Install certbot for SSL
-sudo snap install --classic certbot
-```
-
-3. **Deploy Application**:
-```bash
-# Clone repository
-git clone https://github.com/your-org/ignition-layout-studio.git
-
-# Install and build
-cd ignition-layout-studio
-npm install --prefix backend
-npm install --prefix frontend
-npm run build --prefix frontend
-
-# Setup PM2
-sudo npm install -g pm2
-pm2 start ecosystem.config.js
-```
-
-### Azure App Service
-
-1. **Create App Service**:
-```bash
-# Create resource group
-az group create --name ignition-rg --location eastus
-
-# Create app service plan
-az appservice plan create \
-  --name ignition-plan \
-  --resource-group ignition-rg \
-  --sku B2
-
-# Create web app
-az webapp create \
-  --name ignition-studio \
-  --resource-group ignition-rg \
-  --plan ignition-plan \
-  --runtime "NODE|16-lts"
-```
-
-2. **Deploy with Git**:
-```bash
-# Configure deployment
-az webapp deployment source config-local-git \
-  --name ignition-studio \
-  --resource-group ignition-rg
-
-# Push to Azure
-git remote add azure <deployment-url>
-git push azure main
-```
-
-### Google Cloud Run
-
-1. **Build Container**:
-```bash
-# Build and tag
-docker build -t gcr.io/PROJECT-ID/ignition-studio .
-
-# Push to registry
-docker push gcr.io/PROJECT-ID/ignition-studio
-```
-
-2. **Deploy to Cloud Run**:
-```bash
-gcloud run deploy ignition-studio \
-  --image gcr.io/PROJECT-ID/ignition-studio \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
-```
-
-## Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| NODE_ENV | Environment mode | development |
-| PORT | Server port | 5000 |
-| FRONTEND_URL | Frontend URL for CORS | http://localhost:3000 |
-| PADDLE_OCR_MCP_PATH | Path to PaddleOCR MCP | - |
-| MAX_FILE_SIZE | Maximum upload size | 100MB |
-| SESSION_SECRET | Session encryption key | random |
-| DATABASE_URL | Database connection | - |
-
-### File Storage
-
-Configure persistent storage for:
-- `/uploads` - User uploaded files
-- `/exports` - Generated exports
-- `/projects` - Project data
-- `/logs` - Application logs
-
-### Database (Optional)
-
-For large deployments, consider using a database:
-
-```javascript
-// PostgreSQL configuration
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
-});
-```
-
-## Security
-
-### SSL/TLS Configuration
-
-1. **Obtain SSL Certificate**:
+### 2. SSL Certificate Setup
 ```bash
 # Using Let's Encrypt
+sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d your-domain.com
+
+# Or using custom certificate
+sudo mkdir -p /etc/nginx/ssl
+sudo cp your-cert.pem /etc/nginx/ssl/cert.pem
+sudo cp your-key.pem /etc/nginx/ssl/key.pem
 ```
 
-2. **Configure Strong Ciphers**:
-```nginx
-ssl_protocols TLSv1.2 TLSv1.3;
-ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
-ssl_prefer_server_ciphers off;
-```
+## Database Management
 
-### Security Headers
-
-Add to nginx configuration:
-```nginx
-add_header Strict-Transport-Security "max-age=63072000" always;
-add_header X-Frame-Options "SAMEORIGIN" always;
-add_header X-Content-Type-Options "nosniff" always;
-add_header X-XSS-Protection "1; mode=block" always;
-```
-
-### Authentication (Optional)
-
-Implement authentication middleware:
-```javascript
-// Example with JWT
-const jwt = require('jsonwebtoken');
-
-app.use('/api/*', (req, res, next) => {
-  const token = req.headers.authorization?.split(' ')[1];
-  if (!token) return res.status(401).json({ error: 'Unauthorized' });
-  
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
-    next();
-  } catch (error) {
-    res.status(401).json({ error: 'Invalid token' });
-  }
-});
-```
-
-## Monitoring
-
-### Application Monitoring
-
-1. **PM2 Monitoring**:
+### 1. Database Migrations
 ```bash
-# View real-time logs
-pm2 logs
+# Run migrations
+npm run db:migrate
 
-# Monitor resources
-pm2 monit
+# Rollback migrations
+npm run db:rollback
 
-# Web dashboard
-pm2 web
+# Create new migration
+npm run db:create-migration migration-name
 ```
 
-2. **Health Checks**:
+### 2. Database Backup
 ```bash
-# Setup health check endpoint monitoring
-curl http://your-domain.com/api/health
+# Create backup
+pg_dump -U ignition_user -h localhost ignition_layout_studio > backup.sql
+
+# Restore backup
+psql -U ignition_user -h localhost ignition_layout_studio < backup.sql
 ```
 
-### Log Management
-
-1. **Configure Log Rotation**:
+### 3. Database Monitoring
 ```bash
-# /etc/logrotate.d/ignition-studio
-/var/log/ignition-studio/*.log {
-    daily
-    rotate 14
-    compress
-    delaycompress
-    notifempty
-    create 0640 www-data www-data
-    sharedscripts
-    postrotate
-        pm2 reloadLogs
-    endscript
-}
+# Check database connections
+SELECT * FROM pg_stat_activity;
+
+# Check database size
+SELECT pg_database.datname, pg_database_size(pg_database.datname) 
+FROM pg_database;
+
+# Check slow queries
+SELECT query, mean_time, calls 
+FROM pg_stat_statements 
+ORDER BY mean_time DESC 
+LIMIT 10;
 ```
 
-2. **Centralized Logging** (optional):
-- ELK Stack (Elasticsearch, Logstash, Kibana)
-- CloudWatch (AWS)
-- Stackdriver (GCP)
-- Application Insights (Azure)
+## Performance Monitoring
 
-### Performance Monitoring
+### 1. Application Metrics
+The application includes built-in performance monitoring:
 
-1. **New Relic Integration**:
-```javascript
-// Add to server.js
-if (process.env.NEW_RELIC_LICENSE_KEY) {
-  require('newrelic');
-}
+- **Response Time Monitoring**: Tracks API response times
+- **Error Rate Monitoring**: Monitors application errors
+- **System Resource Monitoring**: CPU, memory, disk usage
+- **Database Performance**: Query times and connection counts
+
+### 2. Accessing Metrics
+```bash
+# Get current metrics
+curl http://localhost:3001/api/metrics
+
+# Get performance summary
+curl http://localhost:3001/api/metrics/summary
+
+# Get performance report
+curl http://localhost:3001/api/metrics/report?timeRange=24h
 ```
 
-2. **Custom Metrics**:
-```javascript
-// Track response times
-app.use((req, res, next) => {
-  const start = Date.now();
-  res.on('finish', () => {
-    const duration = Date.now() - start;
-    console.log(`${req.method} ${req.url} - ${duration}ms`);
-  });
-  next();
-});
+### 3. External Monitoring Integration
+```bash
+# Datadog integration
+export DATADOG_API_KEY=your-datadog-key
+
+# New Relic integration
+export NEW_RELIC_LICENSE_KEY=your-newrelic-key
+
+# Sentry integration
+export SENTRY_DSN=your-sentry-dsn
 ```
+
+## Security Configuration
+
+### 1. Authentication Setup
+```bash
+# Create admin user
+curl -X POST http://localhost:3001/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "admin",
+    "email": "admin@yourcompany.com",
+    "password": "SecurePassword123!",
+    "firstName": "Admin",
+    "lastName": "User",
+    "role": "admin"
+  }'
+```
+
+### 2. Security Headers
+The application automatically includes security headers:
+- HSTS (HTTP Strict Transport Security)
+- X-Frame-Options
+- X-Content-Type-Options
+- X-XSS-Protection
+- Content Security Policy
+
+### 3. Rate Limiting
+Built-in rate limiting:
+- General API: 100 requests/15 minutes
+- Authentication: 10 requests/15 minutes
+- Login attempts: 5 requests/15 minutes
 
 ## Backup and Recovery
 
-### Automated Backups
-
+### 1. Automated Backups
 ```bash
-#!/bin/bash
-# backup.sh
-BACKUP_DIR="/backups/ignition-studio"
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+# Setup automated database backups
+crontab -e
 
-# Backup data directories
-tar -czf "$BACKUP_DIR/data_$TIMESTAMP.tar.gz" \
-  /app/data/uploads \
-  /app/data/exports \
-  /app/data/projects
-
-# Cleanup old backups (keep 30 days)
-find $BACKUP_DIR -name "*.tar.gz" -mtime +30 -delete
+# Add backup job (daily at 2 AM)
+0 2 * * * /usr/bin/pg_dump -U ignition_user ignition_layout_studio > /backups/db-$(date +\%Y\%m\%d).sql
 ```
 
-### Disaster Recovery
+### 2. File Backups
+```bash
+# Backup uploaded files
+tar -czf uploads-backup-$(date +%Y%m%d).tar.gz uploads/
 
-1. **Regular backups** to off-site storage
-2. **Database replication** if using database
-3. **Container registry** for Docker images
-4. **Infrastructure as Code** for quick rebuilds
+# Backup logs
+tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
+```
+
+## Monitoring and Maintenance
+
+### 1. Health Checks
+```bash
+# Application health
+curl http://localhost:3001/api/health
+
+# Database health
+curl http://localhost:3001/api/health/database
+
+# System health
+curl http://localhost:3001/api/health/system
+```
+
+### 2. Log Monitoring
+```bash
+# View application logs
+tail -f logs/app.log
+
+# View error logs
+tail -f logs/error.log
+
+# View access logs
+tail -f logs/access.log
+```
+
+### 3. Performance Monitoring
+```bash
+# Check system resources
+htop
+
+# Check disk usage
+df -h
+
+# Check memory usage
+free -h
+
+# Check database connections
+sudo -u postgres psql -c "SELECT count(*) FROM pg_stat_activity;"
+```
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Port already in use**:
+#### 1. Database Connection Issues
 ```bash
-# Find process using port
-lsof -i :5000
-# Kill process
-kill -9 <PID>
+# Check PostgreSQL status
+sudo systemctl status postgresql
+
+# Check connection
+psql -U ignition_user -h localhost -d ignition_layout_studio
+
+# Check logs
+sudo tail -f /var/log/postgresql/postgresql-*.log
 ```
 
-2. **Permission errors**:
+#### 2. High Memory Usage
 ```bash
-# Fix permissions
-sudo chown -R $USER:$USER /app
-chmod -R 755 /app/data
+# Check memory usage
+free -h
+ps aux --sort=-%mem | head
+
+# Restart services if needed
+pm2 restart all
 ```
 
-3. **Memory issues**:
+#### 3. Performance Issues
 ```bash
-# Increase Node.js memory
-NODE_OPTIONS="--max-old-space-size=4096" npm start
+# Check slow queries
+curl http://localhost:3001/api/metrics/slow-queries
+
+# Check system metrics
+curl http://localhost:3001/api/metrics/system
+
+# Check error rates
+curl http://localhost:3001/api/metrics/errors
 ```
 
-### Debug Mode
+## Scaling Considerations
 
-Enable debug logging:
+### 1. Horizontal Scaling
+- Use load balancer (nginx, HAProxy)
+- Scale backend instances with PM2 cluster mode
+- Implement session storage (Redis)
+- Use CDN for static assets
+
+### 2. Database Scaling
+- Implement read replicas
+- Use connection pooling
+- Optimize queries and indexes
+- Consider database sharding for large datasets
+
+### 3. Caching Strategy
+- Implement Redis for session storage
+- Use application-level caching
+- Implement CDN for static assets
+- Cache database queries
+
+## Updates and Maintenance
+
+### 1. Application Updates
 ```bash
-DEBUG=* npm start
+# Pull latest changes
+git pull origin main
+
+# Update dependencies
+npm ci
+
+# Run migrations
+npm run db:migrate
+
+# Restart services
+pm2 restart all
 ```
+
+### 2. Security Updates
+```bash
+# Check for vulnerabilities
+npm audit
+
+# Update packages
+npm update
+
+# Check Docker images
+docker images
+docker pull postgres:14
+```
+
+This deployment guide provides comprehensive instructions for deploying the Ignition Layout Studio with all advanced features. Follow the appropriate method based on your infrastructure requirements.

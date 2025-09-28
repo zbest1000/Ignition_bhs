@@ -1,12 +1,35 @@
 {
   "name": "ignition-layout-studio-backend",
   "version": "1.0.0",
-  "description": "Backend server for Ignition Layout Studio - Web-based Drawing-to-Ignition HMI Generator",
+  "description": "Backend for Ignition Layout Studio with AI integration",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\"",
+    "quality": "npm run lint && npm run format:check && npm run test"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js",
+      "!**/node_modules/**"
+    ],
+    "coverageDirectory": "coverage",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/__tests__/setup.js"
+    ]
   },
   "keywords": [
     "ignition",
@@ -20,27 +43,48 @@
   "author": "Ignition Layout Studio Team",
   "license": "MIT",
   "dependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
     "archiver": "^6.0.1",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.6.1",
     "dxf-parser": "^1.0.0-alpha.3",
     "express": "^4.18.2",
-    "helmet": "^7.0.0",
+    "express-rate-limit": "^7.5.1",
+    "express-slow-down": "^2.1.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^7.2.0",
+    "jest": "^30.0.4",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "pdf-parse": "^1.1.1",
-    "sharp": "^0.32.6",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7",
+    "sharp": "^0.33.5",
     "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.7",
+    "supertest": "^7.1.3",
     "svg.js": "^2.7.1",
     "uuid": "^9.0.1",
-    "ws": "^8.14.2",
-    "xlsx": "^0.18.5"
+    "validator": "^13.15.15",
+    "ws": "^8.14.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/pg": "^8.15.4",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "sequelize-cli": "^6.6.3"
   },
   "engines": {
     "node": ">=14.0.0"

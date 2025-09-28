@@ -12,40 +12,40 @@ router.post('/process/:projectId/:fileId', async (req, res) => {
   try {
     const { projectId, fileId } = req.params;
     const { options = {} } = req.body;
-    
+
     const project = await Project.load(projectId);
     const file = project.files.find(f => f.id === fileId);
-    
+
     if (!file) {
       return res.status(404).json({ error: 'File not found' });
     }
-    
+
     // Check if file type is supported for OCR
     const supportedTypes = ['image', 'pdf'];
     if (!supportedTypes.includes(file.category)) {
-      return res.status(400).json({ 
+      return res.status(400).json({
         error: 'File type not supported for OCR',
-        supportedTypes 
+        supportedTypes
       });
     }
-    
+
     // Emit processing started event
     const io = req.app.get('io');
     io.to(projectId).emit('ocr-started', { fileId, status: 'processing' });
-    
+
     // Process with OCR
     const ocrResult = await processWithOCR(file.path, options);
-    
+
     // Extract components from OCR results
     const extractedComponents = await extractComponentsFromOCR(ocrResult, file);
-    
+
     // Add components to project
     extractedComponents.forEach(component => {
       project.addComponent(component);
     });
-    
+
     await project.save();
-    
+
     // Emit completion event
     io.to(projectId).emit('ocr-completed', {
       fileId,
@@ -53,7 +53,7 @@ router.post('/process/:projectId/:fileId', async (req, res) => {
       componentsFound: extractedComponents.length,
       components: extractedComponents
     });
-    
+
     res.json({
       success: true,
       fileId,
@@ -63,16 +63,15 @@ router.post('/process/:projectId/:fileId', async (req, res) => {
       },
       components: extractedComponents
     });
-    
   } catch (error) {
     console.error('OCR processing error:', error);
-    
+
     const io = req.app.get('io');
     io.to(req.params.projectId).emit('ocr-error', {
       fileId: req.params.fileId,
       error: error.message
     });
-    
+
     res.status(500).json({
       error: 'OCR processing failed',
       message: error.message
@@ -84,18 +83,17 @@ router.post('/process/:projectId/:fileId', async (req, res) => {
 router.get('/results/:projectId/:fileId', async (req, res) => {
   try {
     const { projectId, fileId } = req.params;
-    
+
     const project = await Project.load(projectId);
-    const components = project.components.filter(c => 
-      c.metadata.source === 'ocr' && c.metadata.sourceFileId === fileId
+    const components = project.components.filter(
+      c => c.metadata.source === 'ocr' && c.metadata.sourceFileId === fileId
     );
-    
+
     res.json({
       fileId,
       components,
       count: components.length
     });
-    
   } catch (error) {
     console.error('Error fetching OCR results:', error);
     res.status(500).json({
@@ -110,20 +108,19 @@ router.post('/reprocess/:projectId/:fileId', async (req, res) => {
   try {
     const { projectId, fileId } = req.params;
     const { options = {} } = req.body;
-    
+
     const project = await Project.load(projectId);
-    
+
     // Remove existing OCR components from this file
-    project.components = project.components.filter(c => 
-      !(c.metadata.source === 'ocr' && c.metadata.sourceFileId === fileId)
+    project.components = project.components.filter(
+      c => !(c.metadata.source === 'ocr' && c.metadata.sourceFileId === fileId)
     );
-    
+
     await project.save();
-    
+
     // Reprocess with new options
     req.body.options = options;
     return router.handle(req, res);
-    
   } catch (error) {
     console.error('Error reprocessing OCR:', error);
     res.status(500).json({
@@ -137,7 +134,7 @@ router.post('/reprocess/:projectId/:fileId', async (req, res) => {
 async function processWithOCR(filePath, options = {}) {
   // Use the OCR service for processing
   const result = await ocrService.processImage(filePath);
-  
+
   // Transform to expected format
   return {
     textBlocks: result.texts.map(text => ({
@@ -172,7 +169,7 @@ async function extractComponentsFromOCR(ocrResult, fileInfo) {
     { pattern: /MERGE[_\-\s]?\d+/i, type: 'merge', category: 'equipment' },
     { pattern: /CURVE[_\-\s]?\d+/i, type: 'curve_90', category: 'conveyor' }
   ];
-  
+
   for (const block of ocrResult.textBlocks) {
     for (const { pattern, type, category } of componentPatterns) {
       if (pattern.test(block.text)) {
@@ -196,13 +193,13 @@ async function extractComponentsFromOCR(ocrResult, fileInfo) {
             layer: 'ocr-extracted'
           }
         });
-        
+
         components.push(component);
         break; // Only match first pattern
       }
     }
   }
-  
+
   // Detect relationships and flow direction
   components.forEach((comp, index) => {
     // Simple proximity-based relationship detection
@@ -210,16 +207,16 @@ async function extractComponentsFromOCR(ocrResult, fileInfo) {
       if (index === otherIndex) return false;
       const distance = Math.sqrt(
         Math.pow(comp.geometry.x - other.geometry.x, 2) +
-        Math.pow(comp.geometry.y - other.geometry.y, 2)
+          Math.pow(comp.geometry.y - other.geometry.y, 2)
       );
       return distance < 200; // Within 200 pixels
     });
-    
+
     if (nearbyComponents.length > 0) {
       comp.metadata.nearbyComponents = nearbyComponents.map(c => c.equipmentId);
     }
   });
-  
+
   return components;
 }
 
@@ -228,14 +225,14 @@ router.post('/batch/:projectId', async (req, res) => {
   try {
     const { projectId } = req.params;
     const { fileIds, options = {} } = req.body;
-    
+
     if (!fileIds || !Array.isArray(fileIds)) {
       return res.status(400).json({ error: 'fileIds array is required' });
     }
-    
+
     const project = await Project.load(projectId);
     const results = [];
-    
+
     for (const fileId of fileIds) {
       const file = project.files.find(f => f.id === fileId);
       if (!file || !['image', 'pdf'].includes(file.category)) {
@@ -246,15 +243,15 @@ router.post('/batch/:projectId', async (req, res) => {
         });
         continue;
       }
-      
+
       try {
         const ocrResult = await processWithOCR(file.path, options);
         const components = await extractComponentsFromOCR(ocrResult, file);
-        
+
         components.forEach(component => {
           project.addComponent(component);
         });
-        
+
         results.push({
           fileId,
           success: true,
@@ -268,15 +265,14 @@ router.post('/batch/:projectId', async (req, res) => {
         });
       }
     }
-    
+
     await project.save();
-    
+
     res.json({
       success: true,
       processed: results.length,
       results
     });
-    
   } catch (error) {
     console.error('Batch OCR error:', error);
     res.status(500).json({

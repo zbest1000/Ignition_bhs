@@ -6,13 +6,35 @@ const exec = promisify(require('child_process').exec);
 
 class OCRService {
   constructor() {
-    this.paddleOCRPath = process.env.PADDLE_OCR_MCP_PATH || null;
+    // Resolve PaddleOCR MCP executable
+    this.paddleOCRPath = process.env.PADDLE_OCR_MCP_PATH || this.autoDetectPaddleOCR();
+
     this.useMockOCR = !this.paddleOCRPath;
-    
+
     if (this.useMockOCR) {
-      console.warn('PaddleOCR MCP path not configured. Using mock OCR service.');
+      console.warn('PaddleOCR MCP executable not found – falling back to mock OCR.');
     } else {
       console.log('PaddleOCR MCP configured at:', this.paddleOCRPath);
+    }
+
+    // Initialize pipeline integration
+    this.pipelineService = null;
+    this.advancedFilters = null;
+    this.codeInterpreterService = null;
+    this.initializePipelineIntegration();
+  }
+
+  initializePipelineIntegration() {
+    // Lazy load to avoid circular dependencies
+    try {
+      this.pipelineService = require('./pipelineService');
+      this.advancedFilters = require('./advancedFilters');
+      this.codeInterpreterService = require('./codeInterpreterService');
+    } catch (error) {
+      // Services not available, continue without pipeline integration
+      if (process.env.NODE_ENV !== 'test') {
+        console.error('Error initializing pipeline integration:', error);
+      }
     }
   }
 
@@ -20,7 +42,7 @@ class OCRService {
     if (this.useMockOCR) {
       return this.mockOCRProcess(imagePath);
     }
-    
+
     try {
       // Call PaddleOCR MCP
       const result = await this.callPaddleOCRMCP(imagePath);
@@ -33,25 +55,21 @@ class OCRService {
 
   async callPaddleOCRMCP(imagePath) {
     return new Promise((resolve, reject) => {
-      const args = [
-        'ocr',
-        '--image', imagePath,
-        '--output-format', 'json'
-      ];
+      const args = ['ocr', '--image', imagePath, '--output-format', 'json'];
 
       const paddleProcess = spawn(this.paddleOCRPath, args);
       let stdout = '';
       let stderr = '';
 
-      paddleProcess.stdout.on('data', (data) => {
+      paddleProcess.stdout.on('data', data => {
         stdout += data.toString();
       });
 
-      paddleProcess.stderr.on('data', (data) => {
+      paddleProcess.stderr.on('data', data => {
         stderr += data.toString();
       });
 
-      paddleProcess.on('close', (code) => {
+      paddleProcess.on('close', code => {
         if (code !== 0) {
           reject(new Error(`PaddleOCR process exited with code ${code}: ${stderr}`));
         } else {
@@ -64,7 +82,7 @@ class OCRService {
         }
       });
 
-      paddleProcess.on('error', (error) => {
+      paddleProcess.on('error', error => {
         reject(new Error(`Failed to start PaddleOCR process: ${error.message}`));
       });
     });
@@ -76,11 +94,11 @@ class OCRService {
 
     // Parse PaddleOCR output format
     if (ocrResult.results && Array.isArray(ocrResult.results)) {
-      ocrResult.results.forEach((item) => {
+      ocrResult.results.forEach(item => {
         const text = item.text || '';
         const confidence = item.confidence || 0;
         const bbox = item.bbox || item.box || [];
-        
+
         if (text && confidence > 0.5) {
           texts.push({
             text,
@@ -109,12 +127,7 @@ class OCRService {
       // Convert from [x1,y1,x2,y2,x3,y3,x4,y4] to bounding box
       const xs = [bbox[0], bbox[2], bbox[4], bbox[6]];
       const ys = [bbox[1], bbox[3], bbox[5], bbox[7]];
-      return [
-        Math.min(...xs),
-        Math.min(...ys),
-        Math.max(...xs),
-        Math.max(...ys)
-      ];
+      return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
     }
     return [0, 0, 100, 100]; // Default
   }
@@ -138,21 +151,21 @@ class OCRService {
       { pattern: /ACCUM[_\-\s]?\d+/i, type: 'accumulation_conveyor', category: 'conveyor' },
       { pattern: /SPIRAL[_\-\s]?\d+/i, type: 'spiral_conveyor', category: 'conveyor' },
       { pattern: /CURVE[_\-\s]?\d+/i, type: 'curve_90', category: 'conveyor' },
-      
+
       // Motors and Actuators
       { pattern: /MOTOR[_\-\s]?[A-Z0-9]+/i, type: 'motor', category: 'equipment' },
       { pattern: /M\d+/i, type: 'motor', category: 'equipment' },
       { pattern: /PUSHER[_\-\s]?\d+/i, type: 'pusher', category: 'equipment' },
       { pattern: /LIFTER[_\-\s]?\d+/i, type: 'lifter', category: 'equipment' },
       { pattern: /LIFT[_\-\s]?\d+/i, type: 'lifter', category: 'equipment' },
-      
+
       // Diverters and Sorters
       { pattern: /DIVERT[ER]*[_\-\s]?[A-Z0-9]+/i, type: 'diverter', category: 'equipment' },
       { pattern: /D\d+/i, type: 'diverter', category: 'equipment' },
       { pattern: /MERGE[_\-\s]?\d+/i, type: 'merge', category: 'equipment' },
       { pattern: /SORTER[_\-\s]?\d+/i, type: 'sorter', category: 'equipment' },
       { pattern: /SORT[_\-\s]?\d+/i, type: 'sorter', category: 'equipment' },
-      
+
       // Scanners and Readers
       { pattern: /EDS[_\-\s]?\d+/i, type: 'eds_machine', category: 'equipment' },
       { pattern: /SCANNER[_\-\s]?\d+/i, type: 'scanner', category: 'equipment' },
@@ -160,11 +173,11 @@ class OCRService {
       { pattern: /BARCODE[_\-\s]?\d+/i, type: 'barcode_scanner', category: 'equipment' },
       { pattern: /BC[_\-\s]?\d+/i, type: 'barcode_scanner', category: 'equipment' },
       { pattern: /RFID[_\-\s]?\d+/i, type: 'rfid_reader', category: 'equipment' },
-      
+
       // Scales and Measurement
       { pattern: /SCALE[_\-\s]?\d+/i, type: 'scale', category: 'equipment' },
       { pattern: /WEIGH[_\-\s]?\d+/i, type: 'scale', category: 'equipment' },
-      
+
       // Packaging Equipment
       { pattern: /WRAPPER[_\-\s]?\d+/i, type: 'wrapper', category: 'equipment' },
       { pattern: /WRAP[_\-\s]?\d+/i, type: 'wrapper', category: 'equipment' },
@@ -173,21 +186,21 @@ class OCRService {
       { pattern: /DEPAL[_\-\s]?\d+/i, type: 'depalletizer', category: 'equipment' },
       { pattern: /PRINTER[_\-\s]?\d+/i, type: 'label_printer', category: 'equipment' },
       { pattern: /LABEL[_\-\s]?\d+/i, type: 'label_printer', category: 'equipment' },
-      
+
       // Robotics and AGV
       { pattern: /ROBOT[_\-\s]?\d+/i, type: 'robot_arm', category: 'equipment' },
       { pattern: /ARM[_\-\s]?\d+/i, type: 'robot_arm', category: 'equipment' },
       { pattern: /AGV[_\-\s]?\d+/i, type: 'agv_station', category: 'equipment' },
-      
+
       // Special Equipment
       { pattern: /TURNTABLE[_\-\s]?\d+/i, type: 'turntable', category: 'equipment' },
       { pattern: /TT[_\-\s]?\d+/i, type: 'turntable', category: 'equipment' },
-      
+
       // Safety Equipment
       { pattern: /GATE[_\-\s]?\d+/i, type: 'safety_gate', category: 'safety' },
       { pattern: /E[\-\s]?STOP[_\-\s]?\d*/i, type: 'emergency_stop', category: 'safety' },
       { pattern: /ESTOP[_\-\s]?\d*/i, type: 'emergency_stop', category: 'safety' },
-      
+
       // Sensors
       { pattern: /SENSOR[_\-\s]?\d+/i, type: 'sensor', category: 'sensor' },
       { pattern: /PE[_\-\s]?\d+/i, type: 'photo_eye', category: 'sensor' },
@@ -253,6 +266,228 @@ class OCRService {
     // This is a placeholder for drawing processing
     console.log('Drawing processing not yet implemented:', dwgPath);
     return this.mockOCRProcess(dwgPath);
+  }
+
+  // Enhanced OCR processing with pipeline integration
+  async processImageEnhanced(imagePath, options = {}) {
+    try {
+      // Step 1: Basic OCR processing with PaddleOCR
+      const ocrResult = await this.processImage(imagePath);
+
+      // Step 2: Apply advanced filters for OCR enhancement
+      let enhancedResult = ocrResult;
+      if (this.advancedFilters) {
+        try {
+          enhancedResult = await this.advancedFilters.applyFilter(
+            'ocr-enhancement',
+            ocrResult.texts,
+            {
+              imageContext: options.imageContext || {},
+              industry: options.industry || 'general',
+              drawingType: options.drawingType || 'unknown'
+            }
+          );
+        } catch (error) {
+          console.error('Advanced filter processing failed:', error);
+        }
+      }
+
+      // Step 3: Use pipeline for AI interpretation
+      let aiInterpretation = null;
+      if (this.pipelineService && options.useAI !== false) {
+        try {
+          const messages = [
+            {
+              role: 'user',
+              content: `Analyze these OCR results from an industrial drawing and generate appropriate Ignition components:\n\n${JSON.stringify(enhancedResult.original || ocrResult.texts, null, 2)}`
+            }
+          ];
+
+          const pipelineResult = await this.pipelineService.executePipeline(
+            'ocr-enhancement',
+            messages,
+            {
+              industry: options.industry,
+              context: options.context,
+              safetyLevel: options.safetyLevel
+            }
+          );
+
+          aiInterpretation = pipelineResult;
+        } catch (error) {
+          console.error('Pipeline processing failed:', error);
+        }
+      }
+
+      // Step 4: Use code interpreter for advanced analysis
+      let codeAnalysis = null;
+      if (this.codeInterpreterService && options.useCodeInterpreter !== false) {
+        try {
+          codeAnalysis = await this.codeInterpreterService.generateComponentFromOCR(
+            enhancedResult.original || ocrResult.texts,
+            options.imageContext || {}
+          );
+        } catch (error) {
+          console.error('Code interpreter processing failed:', error);
+        }
+      }
+
+      return {
+        basic: ocrResult,
+        enhanced: enhancedResult,
+        aiInterpretation: aiInterpretation,
+        codeAnalysis: codeAnalysis,
+        processingOptions: options
+      };
+    } catch (error) {
+      console.error('Enhanced OCR processing failed:', error);
+      // Fallback to basic processing
+      return {
+        basic: await this.processImage(imagePath),
+        enhanced: null,
+        aiInterpretation: null,
+        codeAnalysis: null,
+        error: error.message
+      };
+    }
+  }
+
+  // Batch processing for multiple images
+  async processImageBatch(imagePaths, options = {}) {
+    const results = [];
+    const batchOptions = {
+      ...options,
+      batchProcessing: true
+    };
+
+    for (const imagePath of imagePaths) {
+      try {
+        const result = await this.processImageEnhanced(imagePath, batchOptions);
+        results.push({
+          imagePath,
+          result,
+          success: true
+        });
+      } catch (error) {
+        results.push({
+          imagePath,
+          result: null,
+          success: false,
+          error: error.message
+        });
+      }
+    }
+
+    return {
+      results,
+      totalImages: imagePaths.length,
+      successCount: results.filter(r => r.success).length,
+      failureCount: results.filter(r => !r.success).length
+    };
+  }
+
+  // Get OCR processing statistics
+  getProcessingStats() {
+    return {
+      paddleOCRAvailable: !this.useMockOCR,
+      pipelineIntegrationAvailable: !!this.pipelineService,
+      advancedFiltersAvailable: !!this.advancedFilters,
+      codeInterpreterAvailable: !!this.codeInterpreterService,
+      paddleOCRPath: this.paddleOCRPath
+    };
+  }
+
+  // Validate OCR configuration
+  async validateConfiguration() {
+    const validation = {
+      paddleOCR: false,
+      pipelineService: false,
+      advancedFilters: false,
+      codeInterpreter: false,
+      errors: []
+    };
+
+    // Check PaddleOCR
+    if (!this.useMockOCR) {
+      try {
+        // Simple validation - check if path exists
+        const fs = require('fs');
+        if (fs.existsSync(this.paddleOCRPath)) {
+          validation.paddleOCR = true;
+        } else {
+          validation.errors.push('PaddleOCR path does not exist');
+        }
+      } catch (error) {
+        validation.errors.push(`PaddleOCR validation failed: ${error.message}`);
+      }
+    }
+
+    // Check pipeline service
+    if (this.pipelineService) {
+      try {
+        const providers = this.pipelineService.getProviders();
+        validation.pipelineService = providers.some(p => p.available);
+        if (!validation.pipelineService) {
+          validation.errors.push('No AI providers available in pipeline service');
+        }
+      } catch (error) {
+        validation.errors.push(`Pipeline service validation failed: ${error.message}`);
+      }
+    }
+
+    // Check advanced filters
+    if (this.advancedFilters) {
+      try {
+        const filters = this.advancedFilters.getAvailableFilters();
+        validation.advancedFilters = filters.length > 0;
+      } catch (error) {
+        validation.errors.push(`Advanced filters validation failed: ${error.message}`);
+      }
+    }
+
+    // Check code interpreter
+    if (this.codeInterpreterService) {
+      try {
+        const status = this.codeInterpreterService.getActiveExecutions();
+        validation.codeInterpreter = Array.isArray(status);
+      } catch (error) {
+        validation.errors.push(`Code interpreter validation failed: ${error.message}`);
+      }
+    }
+
+    return validation;
+  }
+
+  /**
+   * Attempt to locate a bundled PaddleOCR MCP executable inside the repo so that
+   * users don’t have to set PADDLE_OCR_MCP_PATH manually.
+   *
+   * Returns absolute path string or null if not found / not executable.
+   */
+  autoDetectPaddleOCR() {
+    try {
+      const rootDir = path.join(__dirname, '../../');
+      const candidatePaths = [
+        path.join(rootDir, 'vendors', 'paddleocr', 'paddleocr-mcp'),
+        path.join(rootDir, 'vendor', 'paddleocr', 'paddleocr-mcp'),
+        path.join(rootDir, 'paddleocr-mcp'),
+        path.join(rootDir, 'paddleocr', 'paddleocr-mcp'),
+      ];
+
+      for (const p of candidatePaths) {
+        try {
+          const stats = require('fs').statSync(p);
+          if (stats.isFile()) {
+            return p;
+          }
+        } catch (e) {
+          // ignore missing path
+        }
+      }
+    } catch (err) {
+      console.error('Auto-detect PaddleOCR failed:', err.message);
+    }
+    return null;
   }
 }
 

@@ -8,7 +8,7 @@ class Template {
     this.category = data.category || 'conveyor'; // 'conveyor', 'equipment', 'sensor', 'custom'
     this.description = data.description || '';
     this.version = data.version || '1.0.0';
-    
+
     // Base component properties
     this.baseComponent = data.baseComponent || {
       type: 'straight_conveyor',
@@ -16,7 +16,7 @@ class Template {
       defaultHeight: 50,
       defaultProperties: {}
     };
-    
+
     // Dynamic parameters that can be bound
     this.parameters = data.parameters || [
       {
@@ -41,10 +41,10 @@ class Template {
         description: 'OPC tag for equipment faults'
       }
     ];
-    
+
     // SVG template with placeholders
     this.svgTemplate = data.svgTemplate || this.getDefaultSVGTemplate();
-    
+
     // Perspective template structure
     this.perspectiveTemplate = data.perspectiveTemplate || {
       type: 'embedded-view',
@@ -57,7 +57,7 @@ class Template {
         height: 50
       }
     };
-    
+
     // Vision template structure
     this.visionTemplate = data.visionTemplate || {
       type: 'template',
@@ -65,7 +65,7 @@ class Template {
       parameters: [],
       customProperties: {}
     };
-    
+
     // Animations and interactions
     this.animations = data.animations || [];
     this.events = data.events || {
@@ -73,17 +73,17 @@ class Template {
       onHover: null,
       onValueChange: null
     };
-    
+
     // Tag mappings and expressions
     this.tagMappings = data.tagMappings || {};
     this.expressions = data.expressions || {};
-    
+
     // Scripts and transforms
     this.scripts = data.scripts || {
       transform: null,
       custom: []
     };
-    
+
     // Metadata
     this.metadata = {
       author: data.metadata?.author || 'System',
@@ -91,7 +91,7 @@ class Template {
       ignitionVersion: data.metadata?.ignitionVersion || '8.1',
       ...data.metadata
     };
-    
+
     this.createdAt = data.createdAt || new Date().toISOString();
     this.updatedAt = data.updatedAt || new Date().toISOString();
   }
@@ -132,13 +132,13 @@ class Template {
   // Generate Perspective JSON
   toPerspectiveJSON(instance = {}) {
     const template = JSON.parse(JSON.stringify(this.perspectiveTemplate));
-    
+
     // Apply instance parameters
     if (instance.equipmentId) {
       template.meta = template.meta || {};
       template.meta.name = `${this.name}_${instance.equipmentId}`;
     }
-    
+
     // Apply position and size
     if (instance.geometry) {
       template.position = {
@@ -149,7 +149,7 @@ class Template {
         rotate: instance.geometry.rotation || 0
       };
     }
-    
+
     // Apply tag bindings
     template.props = template.props || {};
     this.parameters.forEach(param => {
@@ -164,12 +164,12 @@ class Template {
         template.props[param.name] = instance[param.name];
       }
     });
-    
+
     // Apply custom properties
     if (instance.properties) {
       template.custom = { ...template.custom, ...instance.properties };
     }
-    
+
     // Apply animations
     if (this.animations.length > 0) {
       template.props.style = template.props.style || {};
@@ -178,13 +178,15 @@ class Template {
           template.props.style[anim.property] = {
             binding: {
               type: 'expression',
-              expression: anim.expression || `if({[default]${anim.binding}}, "${anim.activeColor}", "${anim.inactiveColor}")`
+              expression:
+                anim.expression ||
+                `if({[default]${anim.binding}}, "${anim.activeColor}", "${anim.inactiveColor}")`
             }
           };
         }
       });
     }
-    
+
     return template;
   }
 
@@ -195,7 +197,7 @@ class Template {
       value: instance[p.name] || p.defaultValue,
       type: p.type === 'tag' ? 'String' : p.type
     }));
-    
+
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <Template name="${this.name}_${instance.equipmentId || 'instance'}">
   <Parameters>
@@ -205,7 +207,7 @@ class Template {
     ${this.generateVisionComponents(instance)}
   </Components>
 </Template>`;
-    
+
     return xml;
   }
 
@@ -214,7 +216,7 @@ class Template {
     const g = instance.geometry || {};
     const width = g.width || this.baseComponent.defaultWidth;
     const height = g.height || this.baseComponent.defaultHeight;
-    
+
     return `<Rectangle name="background" x="${g.x || 0}" y="${g.y || 0}" width="${width}" height="${height}">
       <fill>
         <Color>${instance.style?.fill || '#cccccc'}</Color>
@@ -224,14 +226,14 @@ class Template {
         <Width>${instance.style?.strokeWidth || 1}</Width>
       </stroke>
     </Rectangle>
-    <Label name="label" x="${(g.x || 0) + width/2}" y="${(g.y || 0) + height/2}" 
+    <Label name="label" x="${(g.x || 0) + width / 2}" y="${(g.y || 0) + height / 2}" 
            text="${instance.label || ''}" halign="center" valign="middle" />`;
   }
 
   // Generate SVG with template placeholders replaced
   generateSVG(instance = {}) {
     let svg = this.svgTemplate;
-    
+
     // Replace template variables
     const replacements = {
       componentClass: `${this.category} ${instance.type || this.baseComponent.type}`,
@@ -243,12 +245,12 @@ class Template {
       label: instance.label || '',
       equipmentId: instance.equipmentId || ''
     };
-    
+
     // Replace all template variables
     Object.entries(replacements).forEach(([key, value]) => {
       svg = svg.replace(new RegExp(`{{${key}}}`, 'g'), value);
     });
-    
+
     // Handle expressions in template
     svg = svg.replace(/{{(.*?)}}/g, (match, expr) => {
       try {
@@ -258,7 +260,7 @@ class Template {
         return match;
       }
     });
-    
+
     return svg;
   }
 
@@ -313,19 +315,19 @@ class Template {
   // Validate template
   validate() {
     const errors = [];
-    
+
     if (!this.name) {
       errors.push('Template name is required');
     }
-    
+
     if (!this.type) {
       errors.push('Template type is required');
     }
-    
+
     if (!this.svgTemplate) {
       errors.push('SVG template is required');
     }
-    
+
     // Validate parameters
     const paramNames = new Set();
     this.parameters.forEach(param => {
@@ -337,7 +339,7 @@ class Template {
       }
       paramNames.add(param.name);
     });
-    
+
     return {
       valid: errors.length === 0,
       errors

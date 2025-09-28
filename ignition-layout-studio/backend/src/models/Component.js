@@ -8,7 +8,7 @@ class Component {
     this.group = data.group || null;
     this.equipmentId = data.equipmentId || '';
     this.label = data.label || '';
-    
+
     // Geometry properties
     this.geometry = {
       x: data.geometry?.x || 0,
@@ -23,7 +23,7 @@ class Component {
       points: data.geometry?.points || [],
       path: data.geometry?.path || null
     };
-    
+
     // Visual properties
     this.style = {
       fill: data.style?.fill || '#cccccc',
@@ -33,7 +33,7 @@ class Component {
       visible: data.style?.visible !== false,
       locked: data.style?.locked || false
     };
-    
+
     // Tag bindings
     this.tags = {
       status: data.tags?.status || null,
@@ -42,7 +42,7 @@ class Component {
       direction: data.tags?.direction || null,
       ...data.tags
     };
-    
+
     // Metadata
     this.metadata = {
       layer: data.metadata?.layer || 'default',
@@ -51,7 +51,7 @@ class Component {
       confidence: data.metadata?.confidence || null,
       ...data.metadata
     };
-    
+
     // Animation and scripting
     this.animations = data.animations || [];
     this.scripts = {
@@ -60,7 +60,7 @@ class Component {
       onValueChange: data.scripts?.onValueChange || null,
       ...data.scripts
     };
-    
+
     // Additional properties
     this.properties = data.properties || {};
     this.createdAt = data.createdAt || new Date().toISOString();
@@ -92,16 +92,16 @@ class Component {
     const g = this.geometry;
     const s = this.style;
     let svgElement = '';
-    
+
     const transform = `translate(${g.x},${g.y}) rotate(${g.rotation}) scale(${g.scale})`;
     const baseAttrs = `fill="${s.fill}" stroke="${s.stroke}" stroke-width="${s.strokeWidth}" opacity="${s.opacity}"`;
     const dataAttrs = `data-component-id="${this.id}" data-equipment="${this.equipmentId}" data-template="${this.templateId || ''}" data-layer="${this.metadata.layer}"`;
-    
+
     switch (this.type) {
       case 'straight_conveyor':
         svgElement = `<rect x="0" y="0" width="${g.width}" height="${g.height}" ${baseAttrs} />`;
         break;
-        
+
       case 'curve_90':
       case 'curve_45':
       case 'curve_180':
@@ -109,11 +109,11 @@ class Component {
         const path = this.generateCurvePath(angle);
         svgElement = `<path d="${path}" ${baseAttrs} fill="none" />`;
         break;
-        
+
       case 'diverter':
         svgElement = this.generateDiverterSVG();
         break;
-        
+
       default:
         if (g.path) {
           svgElement = `<path d="${g.path}" ${baseAttrs} />`;
@@ -124,13 +124,13 @@ class Component {
           svgElement = `<rect x="0" y="0" width="${g.width}" height="${g.height}" ${baseAttrs} />`;
         }
     }
-    
+
     // Add label if present
     let labelElement = '';
     if (this.label) {
-      labelElement = `<text x="${g.width/2}" y="${g.height/2}" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#000000">${this.label}</text>`;
+      labelElement = `<text x="${g.width / 2}" y="${g.height / 2}" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#000000">${this.label}</text>`;
     }
-    
+
     return `<g transform="${transform}" ${dataAttrs} class="component ${this.type}">
       ${svgElement}
       ${labelElement}
@@ -140,29 +140,29 @@ class Component {
   generateCurvePath(angle) {
     const g = this.geometry;
     const radius = g.radius || Math.min(g.width, g.height) / 2;
-    const sweepAngle = angle * Math.PI / 180;
-    
+    const sweepAngle = (angle * Math.PI) / 180;
+
     const startX = 0;
     const startY = radius;
     const endX = radius * Math.sin(sweepAngle);
     const endY = radius * (1 - Math.cos(sweepAngle));
-    
+
     const largeArcFlag = angle > 180 ? 1 : 0;
-    
+
     return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY}`;
   }
 
   generateDiverterSVG() {
     const g = this.geometry;
     const s = this.style;
-    
+
     // Simple diverter representation
     return `
-      <path d="M 0 ${g.height/2} L ${g.width/2} ${g.height/2} L ${g.width} 0" 
+      <path d="M 0 ${g.height / 2} L ${g.width / 2} ${g.height / 2} L ${g.width} 0" 
             fill="none" stroke="${s.stroke}" stroke-width="${s.strokeWidth}" />
-      <path d="M ${g.width/2} ${g.height/2} L ${g.width} ${g.height}" 
+      <path d="M ${g.width / 2} ${g.height / 2} L ${g.width} ${g.height}" 
             fill="none" stroke="${s.stroke}" stroke-width="${s.strokeWidth}" />
-      <circle cx="${g.width/2}" cy="${g.height/2}" r="5" fill="${s.fill}" stroke="${s.stroke}" />
+      <circle cx="${g.width / 2}" cy="${g.height / 2}" r="5" fill="${s.fill}" stroke="${s.stroke}" />
     `;
   }
 
@@ -193,19 +193,19 @@ class Component {
   // Validation
   validate() {
     const errors = [];
-    
+
     if (!this.type) {
       errors.push('Component type is required');
     }
-    
+
     if (!this.equipmentId) {
       errors.push('Equipment ID is required');
     }
-    
+
     if (this.geometry.x == null || this.geometry.y == null) {
       errors.push('Component position (x, y) is required');
     }
-    
+
     return {
       valid: errors.length === 0,
       errors

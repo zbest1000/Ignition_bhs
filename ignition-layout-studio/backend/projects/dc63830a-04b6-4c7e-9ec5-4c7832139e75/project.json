@@ -1,0 +1,1653 @@
+{
+  "id": "dc63830a-04b6-4c7e-9ec5-4c7832139e75",
+  "name": "dh (Copy) (Copy)",
+  "description": "uyu",
+  "createdAt": "2025-07-12T17:10:20.123Z",
+  "updatedAt": "2025-07-12T17:10:20.123Z",
+  "files": [],
+  "components": [
+    {
+      "id": "66568935-afa0-41fa-b8dc-02462838c0e5",
+      "type": "industrial.straight-conveyor",
+      "templateId": null,
+      "group": "8a4e2e3a-cd8c-46bd-8d62-f7653d545ad5",
+      "equipmentId": "ConveyorBelt_1752313282987",
+      "label": "Conveyor Belt",
+      "geometry": {
+        "x": 820,
+        "y": 220,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#52c41a",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A main conveyor belt 300x40 for baggage handling",
+        "generatedAt": "2025-07-12T09:41:22.987Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "industrial"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A main conveyor belt 300x40 for baggage handling",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:22.987Z",
+      "updatedAt": "2025-07-12T17:04:24.011Z"
+    },
+    {
+      "id": "660d1479-5a89-4ad9-8025-03656e17ccc6",
+      "type": "industrial.straight-conveyor",
+      "templateId": null,
+      "group": "8a4e2e3a-cd8c-46bd-8d62-f7653d545ad5",
+      "equipmentId": "ConveyorBelt_1752313282989",
+      "label": "Conveyor Belt",
+      "geometry": {
+        "x": 620,
+        "y": 220,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#52c41a",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A sorting conveyor system 250x35 called Sort Line",
+        "generatedAt": "2025-07-12T09:41:22.989Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "industrial"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A sorting conveyor system 250x35 called Sort Line",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:22.989Z",
+      "updatedAt": "2025-07-12T17:02:14.352Z"
+    },
+    {
+      "id": "e60e1d1a-0ebf-4461-96bc-5d35b0d66c4c",
+      "type": "perspective.motor",
+      "templateId": null,
+      "group": "e6102e1a-30f9-43f8-aeec-0b5e97dd4465",
+      "equipmentId": "Motor_1752313286970",
+      "label": "Motor/Pump",
+      "geometry": {
+        "x": 660,
+        "y": 340,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#fa8c16",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A pump motor 60x60 for hydraulic system",
+        "generatedAt": "2025-07-12T09:41:26.970Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "perspective"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A pump motor 60x60 for hydraulic system",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:26.970Z",
+      "updatedAt": "2025-07-12T17:01:54.944Z"
+    },
+    {
+      "id": "447cee02-9939-4e96-963e-8c74b39f2551",
+      "type": "perspective.motor",
+      "templateId": null,
+      "group": "e6102e1a-30f9-43f8-aeec-0b5e97dd4465",
+      "equipmentId": "Motor_1752313286972",
+      "label": "Motor/Pump",
+      "geometry": {
+        "x": 243.86860703323956,
+        "y": 139.41851652329075,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#fa8c16",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A fan motor 70x70 for cooling system",
+        "generatedAt": "2025-07-12T09:41:26.972Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "perspective"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A fan motor 70x70 for cooling system",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:26.972Z",
+      "updatedAt": "2025-07-12T17:01:54.944Z"
+    },
+    {
+      "id": "d61c4fe7-08d8-49b6-aa92-5c51791773ba",
+      "type": "industrial.sensor",
+      "templateId": null,
+      "group": "214cbcdc-4208-4a01-97a5-64dcafc4a41a",
+      "equipmentId": "Sensor_1752313289125",
+      "label": "Sensor",
+      "geometry": {
+        "x": 327.94239877636073,
+        "y": 177.00012753861847,
+        "width": 40,
+        "height": 40,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#722ed1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A baggage detector sensor 30x30 for presence detection",
+        "generatedAt": "2025-07-12T09:41:29.125Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "industrial"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A baggage detector sensor 30x30 for presence detection",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:29.125Z",
+      "updatedAt": "2025-07-12T17:01:54.944Z"
+    },
+    {
+      "id": "9209b3da-d2bc-47f1-bdea-4a815536b808",
+      "type": "industrial.sensor",
+      "templateId": null,
+      "group": "214cbcdc-4208-4a01-97a5-64dcafc4a41a",
+      "equipmentId": "Sensor_1752313289126",
+      "label": "Sensor",
+      "geometry": {
+        "x": 157.7968356587264,
+        "y": 126.59081759297968,
+        "width": 40,
+        "height": 40,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#722ed1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "A weight sensor 40x40 for load monitoring",
+        "generatedAt": "2025-07-12T09:41:29.126Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "industrial"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "A weight sensor 40x40 for load monitoring",
+        "createdBy": "ai-mock"
+      },
+      "createdAt": "2025-07-12T09:41:29.126Z",
+      "updatedAt": "2025-07-12T17:01:54.944Z"
+    },
+    {
+      "id": "81eb83f3-c6ab-464e-8383-0d5da55ecc3e",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "COMP_1752313344534",
+      "label": "New Component",
+      "geometry": {
+        "x": 1020,
+        "y": 220,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#52c41a",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "text-description",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "a conveyor belt"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "a conveyor belt",
+        "createdBy": "text-parser"
+      },
+      "createdAt": "2025-07-12T09:42:24.938Z",
+      "updatedAt": "2025-07-12T17:04:34.739Z"
+    },
+    {
+      "id": "60cddaba-f76b-41a7-877f-770ab27a1c5d",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "COMP_1752339786479",
+      "label": "New Component",
+      "geometry": {
+        "x": 240,
+        "y": 80,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#52c41a",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "text-description",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "curve conveyor"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "curve conveyor",
+        "createdBy": "text-parser"
+      },
+      "createdAt": "2025-07-12T17:03:06.808Z",
+      "updatedAt": "2025-07-12T17:03:34.768Z"
+    },
+    {
+      "id": "8414f568-1c7e-4bd7-80f3-6e92268e2cf6",
+      "type": "custom",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "COMP_1752339802983",
+      "label": "New Component",
+      "geometry": {
+        "x": 400,
+        "y": 240,
+        "width": 100,
+        "height": 50,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#1890ff",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "text-description",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "curve 45"
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "curve 45",
+        "createdBy": "text-parser"
+      },
+      "createdAt": "2025-07-12T17:03:23.319Z",
+      "updatedAt": "2025-07-12T17:03:32.051Z"
+    }
+  ],
+  "templates": [
+    {
+      "id": "0a7b98cf-1c6d-4570-a3d6-632a2ae7ff36",
+      "name": "conveyor_industrial.straight-conveyor_template",
+      "type": "component",
+      "category": "conveyor",
+      "description": "Auto-generated template for industrial.straight-conveyor components",
+      "version": "1.0.0",
+      "baseComponent": {
+        "type": "industrial.straight-conveyor",
+        "defaultWidth": 200,
+        "defaultHeight": 30,
+        "defaultProperties": {
+          "style": {
+            "fill": "#52c41a",
+            "stroke": "#000000",
+            "strokeWidth": 2,
+            "opacity": 1,
+            "visible": true,
+            "locked": false
+          },
+          "tags": {
+            "status": null,
+            "fault": null,
+            "speed": null,
+            "direction": null
+          },
+          "properties": {
+            "createdBy": "ai-mock"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "equipmentId",
+          "type": "string",
+          "required": true,
+          "defaultValue": "",
+          "description": "Unique equipment identifier"
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": "Industrial.Straight-Conveyor",
+          "description": "Component display label"
+        },
+        {
+          "name": "fillColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#52c41a",
+          "description": "Fill color"
+        },
+        {
+          "name": "strokeColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#000000",
+          "description": "Stroke color"
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "required": false,
+          "defaultValue": 200,
+          "description": "Component width"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "required": false,
+          "defaultValue": 30,
+          "description": "Component height"
+        }
+      ],
+      "svgTemplate": "<g class=\"{{componentClass}} {{category}}-component\">\n\n  <rect x=\"0\" y=\"0\" width=\"200\" height=\"30\" \n        fill=\"{{fillColor}}\" stroke=\"{{strokeColor}}\" stroke-width=\"{{strokeWidth}}\"\n        class=\"conveyor-belt\"/>\n  <rect x=\"5\" y=\"5\" width=\"190\" height=\"20\" \n        fill=\"none\" stroke=\"{{strokeColor}}\" stroke-width=\"1\" stroke-dasharray=\"5,5\"\n        class=\"conveyor-direction\"/>\n  <text x=\"100\" y=\"15\" text-anchor=\"middle\" \n        dominant-baseline=\"middle\" font-size=\"{{fontSize}}\" fill=\"{{textColor}}\">{{label}}</text>\n</g>",
+      "perspectiveTemplate": {
+        "type": "drawing",
+        "props": {
+          "elements": [
+            {
+              "type": "rect",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 200,
+                "height": 30
+              },
+              "style": {
+                "fill": "{{fillColor}}",
+                "stroke": "{{strokeColor}}",
+                "strokeWidth": "{{strokeWidth}}"
+              }
+            }
+          ]
+        },
+        "custom": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.straight-conveyor",
+          "category": "conveyor"
+        }
+      },
+      "visionTemplate": {
+        "type": "rectangle",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 30
+        },
+        "background": "{{fillColor}}",
+        "foreground": "{{strokeColor}}",
+        "lineWidth": "{{strokeWidth}}",
+        "text": "{{label}}",
+        "customProperties": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.straight-conveyor",
+          "category": "conveyor"
+        }
+      },
+      "animations": [],
+      "events": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "tagMappings": {},
+      "expressions": {},
+      "scripts": {
+        "transform": null,
+        "custom": []
+      },
+      "metadata": {
+        "author": "System",
+        "tags": [],
+        "ignitionVersion": "8.1",
+        "sourceGroup": true,
+        "componentCount": 3,
+        "generatedAt": "2025-07-12T17:01:39.429Z"
+      },
+      "createdAt": "2025-07-12T17:01:39.429Z",
+      "updatedAt": "2025-07-12T17:01:39.429Z"
+    },
+    {
+      "id": "614384fe-dec8-4260-b89e-8a280f302f0f",
+      "name": "equipment_perspective.motor_template",
+      "type": "component",
+      "category": "equipment",
+      "description": "Auto-generated template for perspective.motor components",
+      "version": "1.0.0",
+      "baseComponent": {
+        "type": "perspective.motor",
+        "defaultWidth": 60,
+        "defaultHeight": 60,
+        "defaultProperties": {
+          "style": {
+            "fill": "#fa8c16",
+            "stroke": "#000000",
+            "strokeWidth": 2,
+            "opacity": 1,
+            "visible": true,
+            "locked": false
+          },
+          "tags": {
+            "status": null,
+            "fault": null,
+            "speed": null,
+            "direction": null
+          },
+          "properties": {
+            "createdBy": "ai-mock"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "equipmentId",
+          "type": "string",
+          "required": true,
+          "defaultValue": "",
+          "description": "Unique equipment identifier"
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": "Perspective.Motor",
+          "description": "Component display label"
+        },
+        {
+          "name": "fillColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#fa8c16",
+          "description": "Fill color"
+        },
+        {
+          "name": "strokeColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#000000",
+          "description": "Stroke color"
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "required": false,
+          "defaultValue": 60,
+          "description": "Component width"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "required": false,
+          "defaultValue": 60,
+          "description": "Component height"
+        }
+      ],
+      "svgTemplate": "<g class=\"{{componentClass}} {{category}}-component\">\n\n  <circle cx=\"30\" cy=\"30\" r=\"25\" \n          fill=\"{{fillColor}}\" stroke=\"{{strokeColor}}\" stroke-width=\"{{strokeWidth}}\"\n          class=\"equipment-body\"/>\n  <circle cx=\"30\" cy=\"30\" r=\"15\" \n          fill=\"none\" stroke=\"{{strokeColor}}\" stroke-width=\"2\"\n          class=\"equipment-center\"/>\n  <text x=\"30\" y=\"30\" text-anchor=\"middle\" \n        dominant-baseline=\"middle\" font-size=\"{{fontSize}}\" fill=\"{{textColor}}\">{{label}}</text>\n</g>",
+      "perspectiveTemplate": {
+        "type": "drawing",
+        "props": {
+          "elements": [
+            {
+              "type": "rect",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 60,
+                "height": 60
+              },
+              "style": {
+                "fill": "{{fillColor}}",
+                "stroke": "{{strokeColor}}",
+                "strokeWidth": "{{strokeWidth}}"
+              }
+            }
+          ]
+        },
+        "custom": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "perspective.motor",
+          "category": "equipment"
+        }
+      },
+      "visionTemplate": {
+        "type": "rectangle",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 60,
+          "height": 60
+        },
+        "background": "{{fillColor}}",
+        "foreground": "{{strokeColor}}",
+        "lineWidth": "{{strokeWidth}}",
+        "text": "{{label}}",
+        "customProperties": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "perspective.motor",
+          "category": "equipment"
+        }
+      },
+      "animations": [],
+      "events": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "tagMappings": {},
+      "expressions": {},
+      "scripts": {
+        "transform": null,
+        "custom": []
+      },
+      "metadata": {
+        "author": "System",
+        "tags": [],
+        "ignitionVersion": "8.1",
+        "sourceGroup": true,
+        "componentCount": 2,
+        "generatedAt": "2025-07-12T17:01:39.429Z"
+      },
+      "createdAt": "2025-07-12T17:01:39.429Z",
+      "updatedAt": "2025-07-12T17:01:39.429Z"
+    },
+    {
+      "id": "1a861dff-e3b8-46a0-9376-68ba12a46ef5",
+      "name": "sensors_industrial.sensor_template",
+      "type": "component",
+      "category": "sensors",
+      "description": "Auto-generated template for industrial.sensor components",
+      "version": "1.0.0",
+      "baseComponent": {
+        "type": "industrial.sensor",
+        "defaultWidth": 40,
+        "defaultHeight": 40,
+        "defaultProperties": {
+          "style": {
+            "fill": "#722ed1",
+            "stroke": "#000000",
+            "strokeWidth": 2,
+            "opacity": 1,
+            "visible": true,
+            "locked": false
+          },
+          "tags": {
+            "status": null,
+            "fault": null,
+            "speed": null,
+            "direction": null
+          },
+          "properties": {
+            "createdBy": "ai-mock"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "equipmentId",
+          "type": "string",
+          "required": true,
+          "defaultValue": "",
+          "description": "Unique equipment identifier"
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": "Industrial.Sensor",
+          "description": "Component display label"
+        },
+        {
+          "name": "fillColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#722ed1",
+          "description": "Fill color"
+        },
+        {
+          "name": "strokeColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#000000",
+          "description": "Stroke color"
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "required": false,
+          "defaultValue": 40,
+          "description": "Component width"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "required": false,
+          "defaultValue": 40,
+          "description": "Component height"
+        }
+      ],
+      "svgTemplate": "<g class=\"{{componentClass}} {{category}}-component\">\n\n  <rect x=\"0\" y=\"0\" width=\"40\" height=\"40\" \n        fill=\"{{fillColor}}\" stroke=\"{{strokeColor}}\" stroke-width=\"{{strokeWidth}}\"\n        class=\"component-body\"/>\n  <text x=\"20\" y=\"20\" text-anchor=\"middle\" \n        dominant-baseline=\"middle\" font-size=\"{{fontSize}}\" fill=\"{{textColor}}\">{{label}}</text>\n</g>",
+      "perspectiveTemplate": {
+        "type": "drawing",
+        "props": {
+          "elements": [
+            {
+              "type": "rect",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 40,
+                "height": 40
+              },
+              "style": {
+                "fill": "{{fillColor}}",
+                "stroke": "{{strokeColor}}",
+                "strokeWidth": "{{strokeWidth}}"
+              }
+            }
+          ]
+        },
+        "custom": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.sensor",
+          "category": "sensors"
+        }
+      },
+      "visionTemplate": {
+        "type": "rectangle",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 40,
+          "height": 40
+        },
+        "background": "{{fillColor}}",
+        "foreground": "{{strokeColor}}",
+        "lineWidth": "{{strokeWidth}}",
+        "text": "{{label}}",
+        "customProperties": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.sensor",
+          "category": "sensors"
+        }
+      },
+      "animations": [],
+      "events": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "tagMappings": {},
+      "expressions": {},
+      "scripts": {
+        "transform": null,
+        "custom": []
+      },
+      "metadata": {
+        "author": "System",
+        "tags": [],
+        "ignitionVersion": "8.1",
+        "sourceGroup": true,
+        "componentCount": 2,
+        "generatedAt": "2025-07-12T17:01:39.430Z"
+      },
+      "createdAt": "2025-07-12T17:01:39.430Z",
+      "updatedAt": "2025-07-12T17:01:39.430Z"
+    },
+    {
+      "id": "e0830d64-f3c3-405c-8699-0c2a1794920a",
+      "name": "industrial.straight-conveyor_template",
+      "type": "component",
+      "category": "conveyor",
+      "description": "Template for industrial.straight-conveyor components",
+      "version": "1.0.0",
+      "baseComponent": {
+        "type": "industrial.straight-conveyor",
+        "defaultWidth": 200,
+        "defaultHeight": 30,
+        "defaultProperties": {
+          "style": {
+            "fill": "#52c41a",
+            "stroke": "#000000",
+            "strokeWidth": 2,
+            "opacity": 1,
+            "visible": true,
+            "locked": false
+          },
+          "tags": {
+            "status": null,
+            "fault": null,
+            "speed": null,
+            "direction": null
+          },
+          "properties": {
+            "createdBy": "ai-mock"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "equipmentId",
+          "type": "string",
+          "required": true,
+          "defaultValue": "",
+          "description": "Unique equipment identifier"
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "defaultValue": "Industrial.Straight-Conveyor",
+          "description": "Component display label"
+        },
+        {
+          "name": "fillColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#52c41a",
+          "description": "Fill color"
+        },
+        {
+          "name": "strokeColor",
+          "type": "color",
+          "required": false,
+          "defaultValue": "#000000",
+          "description": "Stroke color"
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "required": false,
+          "defaultValue": 200,
+          "description": "Component width"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "required": false,
+          "defaultValue": 30,
+          "description": "Component height"
+        }
+      ],
+      "svgTemplate": "<g class=\"{{componentClass}} {{category}}-component\">\n\n  <rect x=\"0\" y=\"0\" width=\"200\" height=\"30\" \n        fill=\"{{fillColor}}\" stroke=\"{{strokeColor}}\" stroke-width=\"{{strokeWidth}}\"\n        class=\"conveyor-belt\"/>\n  <rect x=\"5\" y=\"5\" width=\"190\" height=\"20\" \n        fill=\"none\" stroke=\"{{strokeColor}}\" stroke-width=\"1\" stroke-dasharray=\"5,5\"\n        class=\"conveyor-direction\"/>\n  <text x=\"100\" y=\"15\" text-anchor=\"middle\" \n        dominant-baseline=\"middle\" font-size=\"{{fontSize}}\" fill=\"{{textColor}}\">{{label}}</text>\n</g>",
+      "perspectiveTemplate": {
+        "type": "drawing",
+        "props": {
+          "elements": [
+            {
+              "type": "rect",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 200,
+                "height": 30
+              },
+              "style": {
+                "fill": "{{fillColor}}",
+                "stroke": "{{strokeColor}}",
+                "strokeWidth": "{{strokeWidth}}"
+              }
+            }
+          ]
+        },
+        "custom": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.straight-conveyor",
+          "category": "conveyor"
+        }
+      },
+      "visionTemplate": {
+        "type": "rectangle",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 30
+        },
+        "background": "{{fillColor}}",
+        "foreground": "{{strokeColor}}",
+        "lineWidth": "{{strokeWidth}}",
+        "text": "{{label}}",
+        "customProperties": {
+          "equipmentId": "{{equipmentId}}",
+          "componentType": "industrial.straight-conveyor",
+          "category": "conveyor"
+        }
+      },
+      "animations": [],
+      "events": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "tagMappings": {},
+      "expressions": {},
+      "scripts": {
+        "transform": null,
+        "custom": []
+      },
+      "metadata": {
+        "author": "System",
+        "tags": [],
+        "ignitionVersion": "8.1",
+        "sourceGroup": true,
+        "componentCount": 3,
+        "generatedAt": "2025-07-12T17:02:14.357Z"
+      },
+      "createdAt": "2025-07-12T17:02:14.357Z",
+      "updatedAt": "2025-07-12T17:02:14.357Z"
+    }
+  ],
+  "layers": [],
+  "settings": {
+    "gridSize": 10,
+    "snapToGrid": true,
+    "showLabels": true,
+    "units": "meters"
+  },
+  "metadata": {
+    "groups": {
+      "59c141f5-049f-4eff-8a9e-a3020f71e8a8": {
+        "id": "59c141f5-049f-4eff-8a9e-a3020f71e8a8",
+        "name": "conveyor - industrial.straight-conveyor (3)",
+        "type": "auto_type_group",
+        "category": "conveyor",
+        "componentType": "industrial.straight-conveyor",
+        "componentIds": [
+          "66568935-afa0-41fa-b8dc-02462838c0e5",
+          "660d1479-5a89-4ad9-8025-03656e17ccc6",
+          "1dd752f0-1aca-466b-8b66-0a7d17d706cc"
+        ],
+        "templateSuggestion": {
+          "name": "conveyor_industrial.straight-conveyor_template",
+          "description": "Template for industrial.straight-conveyor components (3 instances)",
+          "category": "conveyor",
+          "type": "industrial.straight-conveyor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Industrial.Straight-Conveyor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#52c41a",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 200,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 30,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 200,
+            "height": 30
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#52c41a",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 3
+        },
+        "createdAt": "2025-07-12T17:01:39.428Z",
+        "autoGenerated": true,
+        "priority": 80.0001004062193,
+        "templateId": "0a7b98cf-1c6d-4570-a3d6-632a2ae7ff36",
+        "updatedAt": "2025-07-12T17:01:39.429Z"
+      },
+      "c14ef08c-35ac-4aa3-8ef4-2b339d5fbc2c": {
+        "id": "c14ef08c-35ac-4aa3-8ef4-2b339d5fbc2c",
+        "name": "equipment - perspective.motor (2)",
+        "type": "auto_type_group",
+        "category": "equipment",
+        "componentType": "perspective.motor",
+        "componentIds": [
+          "e60e1d1a-0ebf-4461-96bc-5d35b0d66c4c",
+          "447cee02-9939-4e96-963e-8c74b39f2551"
+        ],
+        "templateSuggestion": {
+          "name": "equipment_perspective.motor_template",
+          "description": "Template for perspective.motor components (2 instances)",
+          "category": "equipment",
+          "type": "perspective.motor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Perspective.Motor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#fa8c16",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 60,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 60,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 60,
+            "height": 60
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#fa8c16",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 2
+        },
+        "createdAt": "2025-07-12T17:01:39.428Z",
+        "autoGenerated": true,
+        "priority": 50.00008059899581,
+        "templateId": "614384fe-dec8-4260-b89e-8a280f302f0f",
+        "updatedAt": "2025-07-12T17:01:39.430Z"
+      },
+      "dd3a3b26-1a4d-43b5-8bb1-d742c0d2d9e1": {
+        "id": "dd3a3b26-1a4d-43b5-8bb1-d742c0d2d9e1",
+        "name": "sensors - industrial.sensor (2)",
+        "type": "auto_type_group",
+        "category": "sensors",
+        "componentType": "industrial.sensor",
+        "componentIds": [
+          "d61c4fe7-08d8-49b6-aa92-5c51791773ba",
+          "9209b3da-d2bc-47f1-bdea-4a815536b808"
+        ],
+        "templateSuggestion": {
+          "name": "sensors_industrial.sensor_template",
+          "description": "Template for industrial.sensor components (2 instances)",
+          "category": "sensors",
+          "type": "industrial.sensor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Industrial.Sensor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#722ed1",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 40,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 40,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 40,
+            "height": 40
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#722ed1",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 2
+        },
+        "createdAt": "2025-07-12T17:01:39.428Z",
+        "autoGenerated": true,
+        "priority": 50.00052634029616,
+        "templateId": "1a861dff-e3b8-46a0-9376-68ba12a46ef5",
+        "updatedAt": "2025-07-12T17:01:39.430Z"
+      },
+      "39e433dd-7bfa-4f20-8a6f-9906f23c44f7": {
+        "id": "39e433dd-7bfa-4f20-8a6f-9906f23c44f7",
+        "name": "conveyor - industrial.straight-conveyor (3)",
+        "type": "auto_type_group",
+        "category": "conveyor",
+        "componentType": "industrial.straight-conveyor",
+        "componentIds": [
+          "66568935-afa0-41fa-b8dc-02462838c0e5",
+          "660d1479-5a89-4ad9-8025-03656e17ccc6",
+          "1dd752f0-1aca-466b-8b66-0a7d17d706cc"
+        ],
+        "templateSuggestion": {
+          "name": "conveyor_industrial.straight-conveyor_template",
+          "description": "Template for industrial.straight-conveyor components (3 instances)",
+          "category": "conveyor",
+          "type": "industrial.straight-conveyor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Industrial.Straight-Conveyor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#52c41a",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 200,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 30,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 200,
+            "height": 30
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#52c41a",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 3
+        },
+        "createdAt": "2025-07-12T17:01:54.944Z",
+        "autoGenerated": true,
+        "priority": 80.0001004062193
+      },
+      "e6102e1a-30f9-43f8-aeec-0b5e97dd4465": {
+        "id": "e6102e1a-30f9-43f8-aeec-0b5e97dd4465",
+        "name": "equipment - perspective.motor (2)",
+        "type": "auto_type_group",
+        "category": "equipment",
+        "componentType": "perspective.motor",
+        "componentIds": [
+          "e60e1d1a-0ebf-4461-96bc-5d35b0d66c4c",
+          "447cee02-9939-4e96-963e-8c74b39f2551"
+        ],
+        "templateSuggestion": {
+          "name": "equipment_perspective.motor_template",
+          "description": "Template for perspective.motor components (2 instances)",
+          "category": "equipment",
+          "type": "perspective.motor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Perspective.Motor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#fa8c16",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 60,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 60,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 60,
+            "height": 60
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#fa8c16",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 2
+        },
+        "createdAt": "2025-07-12T17:01:54.944Z",
+        "autoGenerated": true,
+        "priority": 50.00008059899581
+      },
+      "214cbcdc-4208-4a01-97a5-64dcafc4a41a": {
+        "id": "214cbcdc-4208-4a01-97a5-64dcafc4a41a",
+        "name": "sensors - industrial.sensor (2)",
+        "type": "auto_type_group",
+        "category": "sensors",
+        "componentType": "industrial.sensor",
+        "componentIds": [
+          "d61c4fe7-08d8-49b6-aa92-5c51791773ba",
+          "9209b3da-d2bc-47f1-bdea-4a815536b808"
+        ],
+        "templateSuggestion": {
+          "name": "sensors_industrial.sensor_template",
+          "description": "Template for industrial.sensor components (2 instances)",
+          "category": "sensors",
+          "type": "industrial.sensor",
+          "parameters": [
+            {
+              "name": "equipmentId",
+              "type": "string",
+              "required": true,
+              "defaultValue": "",
+              "description": "Unique equipment identifier"
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false,
+              "defaultValue": "Industrial.Sensor",
+              "description": "Component display label"
+            },
+            {
+              "name": "fillColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#722ed1",
+              "description": "Fill color"
+            },
+            {
+              "name": "strokeColor",
+              "type": "color",
+              "required": false,
+              "defaultValue": "#000000",
+              "description": "Stroke color"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "required": false,
+              "defaultValue": 40,
+              "description": "Component width"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "required": false,
+              "defaultValue": 40,
+              "description": "Component height"
+            }
+          ],
+          "estimatedSize": {
+            "width": 40,
+            "height": 40
+          },
+          "commonProperties": {
+            "style": {
+              "fill": "#722ed1",
+              "stroke": "#000000",
+              "strokeWidth": 2,
+              "opacity": 1,
+              "visible": true,
+              "locked": false
+            },
+            "tags": {
+              "status": null,
+              "fault": null,
+              "speed": null,
+              "direction": null
+            },
+            "properties": {
+              "createdBy": "ai-mock"
+            }
+          },
+          "applicableCount": 2
+        },
+        "createdAt": "2025-07-12T17:01:54.944Z",
+        "autoGenerated": true,
+        "priority": 50.00052634029616
+      },
+      "8a4e2e3a-cd8c-46bd-8d62-f7653d545ad5": {
+        "id": "8a4e2e3a-cd8c-46bd-8d62-f7653d545ad5",
+        "name": "test",
+        "type": "type_group",
+        "category": "conveyor",
+        "componentType": "industrial.straight-conveyor",
+        "componentIds": [
+          "66568935-afa0-41fa-b8dc-02462838c0e5",
+          "660d1479-5a89-4ad9-8025-03656e17ccc6",
+          "1dd752f0-1aca-466b-8b66-0a7d17d706cc"
+        ],
+        "createdAt": "2025-07-12T17:02:14.353Z",
+        "autoGenerated": false,
+        "templateId": "e0830d64-f3c3-405c-8699-0c2a1794920a",
+        "updatedAt": "2025-07-12T17:02:14.358Z"
+      }
+    }
+  },
+  "tagMappings": {},
+  "exportHistory": []
+}

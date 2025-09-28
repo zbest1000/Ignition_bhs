@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ConfigProvider } from 'antd';
 import ProjectList from './pages/ProjectList';
 import ProjectEditor from './pages/ProjectEditor';
+import ErrorBoundary from './components/ErrorBoundary';
 import socketService from './services/socket';
 import './App.css';
 
@@ -18,22 +19,40 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: '#1890ff',
-          borderRadius: 4,
-        },
-      }}
-    >
-      <Router>
-        <Routes>
-          <Route path="/" element={<ProjectList />} />
-          <Route path="/project/:projectId" element={<ProjectEditor />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Router>
-    </ConfigProvider>
+    <ErrorBoundary>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#1890ff',
+            borderRadius: 4,
+          },
+        }}
+      >
+        <Router>
+          <ErrorBoundary>
+            <Routes>
+              <Route
+                path='/'
+                element={
+                  <ErrorBoundary>
+                    <ProjectList />
+                  </ErrorBoundary>
+                }
+              />
+              <Route
+                path='/project/:projectId'
+                element={
+                  <ErrorBoundary>
+                    <ProjectEditor />
+                  </ErrorBoundary>
+                }
+              />
+              <Route path='*' element={<Navigate to='/' replace />} />
+            </Routes>
+          </ErrorBoundary>
+        </Router>
+      </ConfigProvider>
+    </ErrorBoundary>
   );
 };
 

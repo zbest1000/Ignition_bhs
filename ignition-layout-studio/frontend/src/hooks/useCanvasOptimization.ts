@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Component } from '../types';
+import { Component, ComponentType } from '../types';
 
 interface ViewportBounds {
   x: number;
@@ -70,9 +70,9 @@ export const useCanvasOptimization = (
       height: viewport.height + cullingMargin * 2,
     };
 
-    const visible = components.filter((component) => {
+    const visible = components.filter(component => {
       const { x, y, width, height } = component.geometry;
-      
+
       // Check if component bounds intersect with viewport
       return !(
         x + width < expandedViewport.x ||
@@ -127,7 +127,7 @@ export const useCanvasOptimization = (
         };
         // Could also simplify complex shapes to rectangles
         if (['curve_90', 'curve_45', 'curve_180'].includes(component.type)) {
-          simplified.type = 'straight_conveyor';
+          simplified.type = 'straight_conveyor' as ComponentType;
         }
       }
 
@@ -163,8 +163,7 @@ export const useCanvasOptimization = (
     lodLevel,
     metrics,
     // Utility functions
-    isComponentVisible: (componentId: string) =>
-      visibleComponents.some((c) => c.id === componentId),
+    isComponentVisible: (componentId: string) => visibleComponents.some(c => c.id === componentId),
     forceUpdate: cullComponents,
   };
 };
@@ -175,7 +174,11 @@ export const useBatchComponentUpdates = () => {
   const updateTimer = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const batchUpdate = useCallback(
-    (componentId: string, updates: Partial<Component>, onUpdate: (id: string, updates: Partial<Component>) => void) => {
+    (
+      componentId: string,
+      updates: Partial<Component>,
+      onUpdate: (id: string, updates: Partial<Component>) => void
+    ) => {
       // Accumulate updates
       const existing = pendingUpdates.current.get(componentId) || {};
       pendingUpdates.current.set(componentId, { ...existing, ...updates });

@@ -1,0 +1,1058 @@
+{
+  "id": "ce7d0cc4-438d-43ae-bb39-0176a0c55b90",
+  "name": "dh",
+  "description": "uyu",
+  "createdAt": "2025-07-12T09:40:41.880Z",
+  "updatedAt": "2025-07-12T23:05:21.915Z",
+  "files": [],
+  "components": [
+    {
+      "id": "1ff93e6d-3249-4813-a56e-60ac349da791",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_355",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 960,
+        "y": 280,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T18:10:08.450Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752343808449
+      },
+      "createdAt": "2025-07-12T18:10:08.462Z",
+      "updatedAt": "2025-07-13T00:13:51.526Z"
+    },
+    {
+      "id": "79e1cd35-e01b-4758-8b0b-2f042180cf9a",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_622",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 200,
+        "y": 200,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor called Main Line",
+        "generatedAt": "2025-07-12T23:05:21.891Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor called Main Line",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521891
+      },
+      "createdAt": "2025-07-12T23:05:21.902Z",
+      "updatedAt": "2025-07-12T23:05:21.902Z"
+    },
+    {
+      "id": "aacd4709-808c-40c3-9dc3-41db26eba5f8",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_069",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 600,
+        "y": 200,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T23:05:21.903Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521903
+      },
+      "createdAt": "2025-07-12T23:05:21.904Z",
+      "updatedAt": "2025-07-12T23:05:21.904Z"
+    },
+    {
+      "id": "1ea443e9-7842-4dd7-8ad2-e0cb7a3619c1",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_705",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 700,
+        "y": 300,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T23:05:21.904Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521904
+      },
+      "createdAt": "2025-07-12T23:05:21.904Z",
+      "updatedAt": "2025-07-13T00:06:22.756Z"
+    },
+    {
+      "id": "35a8d209-43a3-4186-ba51-8860163349b4",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_461",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 700,
+        "y": 500,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T23:05:21.905Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521905
+      },
+      "createdAt": "2025-07-12T23:05:21.905Z",
+      "updatedAt": "2025-07-12T23:05:21.905Z"
+    },
+    {
+      "id": "cfb1913f-2eaf-45e1-8ee8-a75921d23d95",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_414",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 600,
+        "y": 600,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T23:05:21.905Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521905
+      },
+      "createdAt": "2025-07-12T23:05:21.905Z",
+      "updatedAt": "2025-07-12T23:05:21.905Z"
+    },
+    {
+      "id": "44e1a3b4-f4ea-479e-a74d-2568724acf4f",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_758",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 200,
+        "y": 600,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T23:05:21.906Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521906
+      },
+      "createdAt": "2025-07-12T23:05:21.906Z",
+      "updatedAt": "2025-07-12T23:05:21.906Z"
+    },
+    {
+      "id": "cdb0e5da-6bf4-40b4-ab70-52f00641b856",
+      "type": "straight_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "STR_STR_626",
+      "label": "Straight Conveyor",
+      "geometry": {
+        "x": 100,
+        "y": 500,
+        "width": 200,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#90EE90",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "straight conveyor",
+        "generatedAt": "2025-07-12T23:05:21.906Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "straight_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "straight conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521906
+      },
+      "createdAt": "2025-07-12T23:05:21.906Z",
+      "updatedAt": "2025-07-12T23:05:21.906Z"
+    },
+    {
+      "id": "11e92b2a-5b6a-4130-ba6f-14e7a5584e00",
+      "type": "curve_90_conveyor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "CUR_DEG_818",
+      "label": "90° Curve",
+      "geometry": {
+        "x": 100,
+        "y": 300,
+        "width": 120,
+        "height": 120,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#6FEE6F",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "90 degree curve conveyor",
+        "generatedAt": "2025-07-12T23:05:21.907Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "curve_90_conveyor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "90 degree curve conveyor",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521907
+      },
+      "createdAt": "2025-07-12T23:05:21.907Z",
+      "updatedAt": "2025-07-12T23:05:21.907Z"
+    },
+    {
+      "id": "0a509d15-9f46-49b3-9745-612e33e1f7d9",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_787",
+      "label": "Motor",
+      "geometry": {
+        "x": 300,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op1",
+        "generatedAt": "2025-07-12T23:05:21.908Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521908
+      },
+      "createdAt": "2025-07-12T23:05:21.908Z",
+      "updatedAt": "2025-07-12T23:05:21.908Z"
+    },
+    {
+      "id": "71e60c27-4124-44fb-b5a3-3ad389198e20",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_964",
+      "label": "Motor",
+      "geometry": {
+        "x": 500,
+        "y": 180,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op2",
+        "generatedAt": "2025-07-12T23:05:21.910Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521910
+      },
+      "createdAt": "2025-07-12T23:05:21.911Z",
+      "updatedAt": "2025-07-12T23:05:21.911Z"
+    },
+    {
+      "id": "e51f97af-47c3-4f7b-9e2a-69be42821e4f",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_381",
+      "label": "Motor",
+      "geometry": {
+        "x": 680,
+        "y": 400,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op3",
+        "generatedAt": "2025-07-12T23:05:21.911Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521911
+      },
+      "createdAt": "2025-07-12T23:05:21.911Z",
+      "updatedAt": "2025-07-12T23:05:21.912Z"
+    },
+    {
+      "id": "dc0ca6cc-d06c-44e3-994e-4f49ebb73ac6",
+      "type": "motor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "MOT_MOT_368",
+      "label": "Motor",
+      "geometry": {
+        "x": 400,
+        "y": 580,
+        "width": 60,
+        "height": 60,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#FFB6C1",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "motor station called Op4",
+        "generatedAt": "2025-07-12T23:05:21.912Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "motor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "motor station called Op4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521912
+      },
+      "createdAt": "2025-07-12T23:05:21.912Z",
+      "updatedAt": "2025-07-12T23:05:21.912Z"
+    },
+    {
+      "id": "987a4023-a1e1-411c-9666-0f32ee8222bd",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_927",
+      "label": "Sensor",
+      "geometry": {
+        "x": 280,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 1",
+        "generatedAt": "2025-07-12T23:05:21.913Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 1",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521913
+      },
+      "createdAt": "2025-07-12T23:05:21.913Z",
+      "updatedAt": "2025-07-12T23:05:21.913Z"
+    },
+    {
+      "id": "92f920a3-d66b-4c3c-acc0-904f151121c1",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_626",
+      "label": "Sensor",
+      "geometry": {
+        "x": 480,
+        "y": 160,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 2",
+        "generatedAt": "2025-07-12T23:05:21.913Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 2",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521913
+      },
+      "createdAt": "2025-07-12T23:05:21.913Z",
+      "updatedAt": "2025-07-12T23:05:21.913Z"
+    },
+    {
+      "id": "0f82121d-53ff-4ca8-8ff3-e74938f5af9e",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_937",
+      "label": "Sensor",
+      "geometry": {
+        "x": 660,
+        "y": 380,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 3",
+        "generatedAt": "2025-07-12T23:05:21.914Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 3",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521914
+      },
+      "createdAt": "2025-07-12T23:05:21.914Z",
+      "updatedAt": "2025-07-12T23:05:21.914Z"
+    },
+    {
+      "id": "602d3d1f-e4ce-49b3-9840-efce1610ffd9",
+      "type": "sensor",
+      "templateId": null,
+      "group": null,
+      "equipmentId": "SEN_SEN_202",
+      "label": "Sensor",
+      "geometry": {
+        "x": 380,
+        "y": 560,
+        "width": 30,
+        "height": 30,
+        "rotation": 0,
+        "scale": 1,
+        "length": null,
+        "radius": null,
+        "angle": null,
+        "points": [],
+        "path": null
+      },
+      "style": {
+        "fill": "#87CEEB",
+        "stroke": "#000000",
+        "strokeWidth": 2,
+        "opacity": 1,
+        "visible": true,
+        "locked": false
+      },
+      "tags": {
+        "status": null,
+        "fault": null,
+        "speed": null,
+        "direction": null
+      },
+      "metadata": {
+        "layer": "default",
+        "source": "ai-mock",
+        "ocrText": null,
+        "confidence": null,
+        "originalDescription": "sensor detector at station 4",
+        "generatedAt": "2025-07-12T23:05:21.914Z",
+        "ignitionVersion": "8.1+",
+        "componentCategory": "sensor",
+        "generationType": "fast-mock",
+        "systemLayout": "Manufacturing Loop System",
+        "layoutGenerated": true
+      },
+      "animations": [],
+      "scripts": {
+        "onClick": null,
+        "onHover": null,
+        "onValueChange": null
+      },
+      "properties": {
+        "description": "sensor detector at station 4",
+        "createdBy": "ai-mock",
+        "generatedAt": 1752361521914
+      },
+      "createdAt": "2025-07-12T23:05:21.914Z",
+      "updatedAt": "2025-07-12T23:05:21.915Z"
+    }
+  ],
+  "templates": [],
+  "layers": [],
+  "settings": {
+    "gridSize": 10,
+    "snapToGrid": true,
+    "showLabels": true,
+    "units": "meters"
+  },
+  "metadata": {},
+  "tagMappings": {},
+  "exportHistory": []
+}

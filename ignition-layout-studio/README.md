@@ -216,3 +216,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Konva.js for canvas rendering
 - Ant Design for UI components
 - The Ignition SCADA platform by Inductive Automation
+
+## ⚠️ Persistent Storage Requirements
+
+**Important:** All project data and uploaded files are stored on disk in the `projects/` and `uploads/` directories. To avoid data loss:
+
+- Ensure these directories are mapped to persistent storage (e.g., Docker volumes, cloud storage) in production or containerized deployments.
+- If running locally, do not delete or overwrite these folders unless you intend to remove all project data.
+- On Docker, use volume mounts:
+  ```
+  docker-compose.yml
+  volumes:
+    - ./ignition-layout-studio/projects:/app/projects
+    - ./ignition-layout-studio/uploads:/app/uploads
+  ```
+- Back up these directories regularly if your data is important.
+
+If these folders are deleted or not persisted, all project and file data will be lost on server restart.

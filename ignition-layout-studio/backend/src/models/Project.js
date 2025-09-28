@@ -45,10 +45,10 @@ class Project {
   async save() {
     const projectDir = path.join(__dirname, '../../projects', this.id);
     await fs.mkdir(projectDir, { recursive: true });
-    
+
     const projectFile = path.join(projectDir, 'project.json');
     await fs.writeFile(projectFile, JSON.stringify(this.toJSON(), null, 2));
-    
+
     this.updatedAt = new Date().toISOString();
     return this;
   }
@@ -69,7 +69,7 @@ class Project {
       await fs.mkdir(projectsDir, { recursive: true });
       const dirs = await fs.readdir(projectsDir);
       const projects = [];
-      
+
       for (const dir of dirs) {
         try {
           const project = await Project.load(dir);
@@ -84,7 +84,7 @@ class Project {
           // Skip invalid project directories
         }
       }
-      
+
       return projects;
     } catch (error) {
       return [];

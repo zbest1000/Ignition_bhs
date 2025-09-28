@@ -17,8 +17,8 @@ const SelectionBox: React.FC<SelectionBoxProps> = ({ rect }) => {
       y={rect.y}
       width={rect.width}
       height={rect.height}
-      fill="rgba(0, 102, 255, 0.1)"
-      stroke="rgba(0, 102, 255, 0.8)"
+      fill='rgba(0, 102, 255, 0.1)'
+      stroke='rgba(0, 102, 255, 0.8)'
       strokeWidth={1}
       listening={false}
     />

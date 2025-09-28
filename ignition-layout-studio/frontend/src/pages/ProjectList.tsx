@@ -78,7 +78,7 @@ const ProjectList: React.FC = () => {
 
   const handleCloneProject = async (projectId: string) => {
     try {
-      const clonedProject = await api.cloneProject(projectId);
+      await api.cloneProject(projectId);
       message.success('Project cloned successfully');
       loadProjects();
     } catch (error) {
@@ -89,28 +89,31 @@ const ProjectList: React.FC = () => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Header style={{ background: '#fff', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Title level={2} style={{ margin: 0 }}>Ignition Layout Studio</Title>
-        <Button
-          type="primary"
-          icon={<PlusOutlined />}
-          onClick={() => setCreateModalVisible(true)}
-        >
+      <Header
+        style={{
+          background: '#fff',
+          padding: '0 24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Title level={2} style={{ margin: 0 }}>
+          Ignition Layout Studio
+        </Title>
+        <Button type='primary' icon={<PlusOutlined />} onClick={() => setCreateModalVisible(true)}>
           New Project
         </Button>
       </Header>
       <Content style={{ padding: '24px' }}>
         {loading ? (
           <div style={{ textAlign: 'center', marginTop: 50 }}>
-            <Spin size="large" />
+            <Spin size='large' />
           </div>
         ) : projects.length === 0 ? (
-          <Empty
-            description="No projects yet"
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-          >
+          <Empty description='No projects yet' image={Empty.PRESENTED_IMAGE_SIMPLE}>
             <Button
-              type="primary"
+              type='primary'
               icon={<PlusOutlined />}
               onClick={() => setCreateModalVisible(true)}
             >
@@ -121,34 +124,40 @@ const ProjectList: React.FC = () => {
           <List
             grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 6 }}
             dataSource={projects}
-            renderItem={(project) => (
+            renderItem={project => (
               <List.Item>
                 <Card
                   hoverable
                   onClick={() => navigate(`/project/${project.id}`)}
                   actions={[
-                    <EditOutlined key="edit" onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(`/project/${project.id}`);
-                    }} />,
-                    <CopyOutlined key="clone" onClick={(e) => {
-                      e.stopPropagation();
-                      handleCloneProject(project.id);
-                    }} />,
+                    <EditOutlined
+                      key='edit'
+                      onClick={e => {
+                        e.stopPropagation();
+                        navigate(`/project/${project.id}`);
+                      }}
+                    />,
+                    <CopyOutlined
+                      key='clone'
+                      onClick={e => {
+                        e.stopPropagation();
+                        handleCloneProject(project.id);
+                      }}
+                    />,
                     <Popconfirm
-                      title="Delete Project"
-                      description="Are you sure you want to delete this project?"
-                      onConfirm={(e) => {
+                      title='Delete Project'
+                      description='Are you sure you want to delete this project?'
+                      onConfirm={e => {
                         e?.stopPropagation();
                         handleDeleteProject(project.id);
                       }}
-                      onCancel={(e) => e?.stopPropagation()}
-                      okText="Yes"
-                      cancelText="No"
+                      onCancel={e => e?.stopPropagation()}
+                      okText='Yes'
+                      cancelText='No'
                     >
                       <DeleteOutlined
-                        key="delete"
-                        onClick={(e) => e.stopPropagation()}
+                        key='delete'
+                        onClick={e => e.stopPropagation()}
                         style={{ color: '#ff4d4f' }}
                       />
                     </Popconfirm>,
@@ -158,12 +167,12 @@ const ProjectList: React.FC = () => {
                     avatar={<FolderOpenOutlined style={{ fontSize: 24 }} />}
                     title={project.name}
                     description={
-                      <Space direction="vertical" size="small">
-                        <Text type="secondary">{project.description || 'No description'}</Text>
-                        <Text type="secondary" style={{ fontSize: 12 }}>
+                      <Space direction='vertical' size='small'>
+                        <Text type='secondary'>{project.description || 'No description'}</Text>
+                        <Text type='secondary' style={{ fontSize: 12 }}>
                           Created: {new Date(project.createdAt).toLocaleDateString()}
                         </Text>
-                        <Text type="secondary" style={{ fontSize: 12 }}>
+                        <Text type='secondary' style={{ fontSize: 12 }}>
                           Updated: {new Date(project.updatedAt).toLocaleDateString()}
                         </Text>
                       </Space>
@@ -177,7 +186,7 @@ const ProjectList: React.FC = () => {
       </Content>
 
       <Modal
-        title="Create New Project"
+        title='Create New Project'
         open={createModalVisible}
         onCancel={() => {
           setCreateModalVisible(false);
@@ -185,36 +194,28 @@ const ProjectList: React.FC = () => {
         }}
         footer={null}
       >
-        <Form
-          form={form}
-          layout="vertical"
-          onFinish={handleCreateProject}
-        >
+        <Form form={form} layout='vertical' onFinish={handleCreateProject}>
           <Form.Item
-            name="name"
-            label="Project Name"
+            name='name'
+            label='Project Name'
             rules={[{ required: true, message: 'Please enter project name' }]}
           >
-            <Input placeholder="Enter project name" />
+            <Input placeholder='Enter project name' />
           </Form.Item>
-          <Form.Item
-            name="description"
-            label="Description"
-          >
-            <Input.TextArea
-              placeholder="Enter project description (optional)"
-              rows={3}
-            />
+          <Form.Item name='description' label='Description'>
+            <Input.TextArea placeholder='Enter project description (optional)' rows={3} />
           </Form.Item>
           <Form.Item>
             <Space>
-              <Button type="primary" htmlType="submit">
+              <Button type='primary' htmlType='submit'>
                 Create
               </Button>
-              <Button onClick={() => {
-                setCreateModalVisible(false);
-                form.resetFields();
-              }}>
+              <Button
+                onClick={() => {
+                  setCreateModalVisible(false);
+                  form.resetFields();
+                }}
+              >
                 Cancel
               </Button>
             </Space>
