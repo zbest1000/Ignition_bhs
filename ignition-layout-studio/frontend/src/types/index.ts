@@ -737,3 +737,69 @@ export interface SocketEvents {
   }) => void;
   'ocr-error': (data: { fileId: string; error: string }) => void;
 }
+
+// Edit Mode Types (AutoCAD-like editing)
+export interface EditPoint {
+  id: string;
+  x: number;
+  y: number;
+  type: 'vertex' | 'control' | 'midpoint' | 'center';
+  locked?: boolean;
+  snapped?: boolean;
+  constraints?: {
+    minX?: number;
+    maxX?: number;
+    minY?: number;
+    maxY?: number;
+    fixedAngle?: boolean;
+    fixedDistance?: boolean;
+  };
+}
+
+export interface EditHandle {
+  point: EditPoint;
+  size: number;
+  color: string;
+  hoverColor: string;
+  activeColor: string;
+  shape: 'circle' | 'square' | 'diamond';
+}
+
+export interface EditMode {
+  enabled: boolean;
+  selectedComponent: string | null;
+  editPoints: EditPoint[];
+  activePoint: string | null;
+  tool: 'select' | 'move' | 'rotate' | 'scale' | 'vertex' | 'delete';
+  snapToGrid: boolean;
+  snapToPoints: boolean;
+  snapDistance: number;
+  showDimensions: boolean;
+  showAngles: boolean;
+  history: EditHistoryEntry[];
+  historyIndex: number;
+}
+
+export interface EditHistoryEntry {
+  componentId: string;
+  timestamp: number;
+  action: 'move' | 'rotate' | 'scale' | 'vertex-move' | 'vertex-add' | 'vertex-delete';
+  before: Partial<Component>;
+  after: Partial<Component>;
+}
+
+export interface EditableComponent extends Component {
+  editable?: boolean;
+  editPoints?: EditPoint[];
+  editConstraints?: {
+    allowMove?: boolean;
+    allowRotate?: boolean;
+    allowScale?: boolean;
+    allowVertexEdit?: boolean;
+    maintainAspectRatio?: boolean;
+    minWidth?: number;
+    maxWidth?: number;
+    minHeight?: number;
+    maxHeight?: number;
+  };
+}

@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Stage, Layer, Circle, Image } from 'react-konva';
-import { Component } from '../../types';
+import { Component, EditMode, EditableComponent } from '../../types';
 import ComponentShape from './ComponentShape';
+import { EditableShape } from './EditableShape';
+import { EditToolbar } from './EditToolbar';
+import { EditModeService } from '../../services/editModeService';
 import './Canvas.css';
 
 interface CanvasProps {
@@ -34,6 +37,114 @@ const Canvas: React.FC<CanvasProps> = ({
     height: number;
   } | null>(null);
   const [dragStartPos, setDragStartPos] = useState<any | null>(null); // Point type was removed, so using 'any'
+  
+  // Edit mode state
+  const [editMode, setEditMode] = useState<EditMode>(() => 
+    EditModeService.getInstance().getEditMode()
+  );
+  const editService = EditModeService.getInstance();
+
+  // Subscribe to edit mode changes
+  useEffect(() => {
+    const unsubscribe = editService.subscribe(setEditMode);
+    return unsubscribe;
+  }, [editService]);
+
+  // Keyboard shortcuts for edit mode
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't handle if typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+
+      switch (e.key.toLowerCase()) {
+        case 'e':
+          if (canvasState.selectedComponents?.length > 0) {
+            handleToggleEdit();
+          }
+          break;
+        case 'v':
+          editService.setTool('select');
+          break;
+        case 'm':
+          editService.setTool('move');
+          break;
+        case 'r':
+          editService.setTool('rotate');
+          break;
+        case 's':
+          if (!e.ctrlKey) {
+            editService.setTool('scale');
+          }
+          break;
+        case 'delete':
+        case 'backspace':
+          if (canvasState.selectedComponents?.length > 0) {
+            handleDelete();
+          }
+          break;
+        case 'z':
+          if (e.ctrlKey && !e.shiftKey) {
+            handleUndo();
+          } else if (e.ctrlKey && e.shiftKey) {
+            handleRedo();
+          }
+          break;
+        case 'y':
+          if (e.ctrlKey) {
+            handleRedo();
+          }
+          break;
+        case 'escape':
+          if (editMode.enabled) {
+            handleCancel();
+          } else {
+            onComponentSelect([]);
+          }
+          break;
+        case 'enter':
+          if (editMode.enabled) {
+            handleSave();
+          }
+          break;
+        case 'g':
+          if (e.ctrlKey) {
+            e.preventDefault();
+            editService.toggleSnapToGrid();
+          }
+          break;
+        case 'd':
+          if (e.ctrlKey && e.shiftKey) {
+            e.preventDefault();
+            editService.toggleShowDimensions();
+          }
+          break;
+        case 'a':
+          if (e.ctrlKey && e.shiftKey) {
+            e.preventDefault();
+            editService.toggleShowAngles();
+          }
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [
+    canvasState.selectedComponents,
+    editMode.enabled,
+    handleToggleEdit,
+    handleDelete,
+    handleUndo,
+    handleRedo,
+    handleCancel,
+    handleSave,
+    onComponentSelect,
+    editService
+  ]);
 
   // Handle mouse wheel for zoom
   useEffect(() => {
@@ -217,8 +328,91 @@ const Canvas: React.FC<CanvasProps> = ({
     return component.style.visible;
   });
 
+  // Edit mode handlers
+  const handleToggleEdit = useCallback(() => {
+    const selectedId = canvasState.selectedComponents?.[0];
+    if (selectedId) {
+      editService.toggleEditMode(selectedId);
+      const component = components.find(c => c.id === selectedId);
+      if (component && editMode.enabled) {
+        const points = editService.generateEditPoints(component);
+        editService.setEditPoints(points);
+      }
+    }
+  }, [canvasState.selectedComponents, components, editMode.enabled, editService]);
+
+  const handleEditPointMove = useCallback((componentId: string, pointId: string, newX: number, newY: number) => {
+    const component = components.find(c => c.id === componentId);
+    if (!component) return;
+
+    const points = editMode.editPoints.map(p =>
+      p.id === pointId ? { ...p, x: newX, y: newY } : p
+    );
+
+    const updates = editService.updateComponentFromPoints(component as EditableComponent, points);
+    if (updates.geometry) {
+      onComponentUpdate(componentId, updates);
+      editService.setEditPoints(points);
+    }
+  }, [components, editMode.editPoints, editService, onComponentUpdate]);
+
+  const handleUndo = useCallback(() => {
+    const entry = editService.undo();
+    if (entry) {
+      onComponentUpdate(entry.componentId, entry.before);
+    }
+  }, [editService, onComponentUpdate]);
+
+  const handleRedo = useCallback(() => {
+    const entry = editService.redo();
+    if (entry) {
+      onComponentUpdate(entry.componentId, entry.after);
+    }
+  }, [editService, onComponentUpdate]);
+
+  const handleDelete = useCallback(() => {
+    // This should be handled by parent component
+    const selectedIds = canvasState.selectedComponents || [];
+    selectedIds.forEach(id => {
+      // Trigger delete through parent
+      onComponentUpdate(id, { deleted: true } as any);
+    });
+    onComponentSelect([]);
+  }, [canvasState.selectedComponents, onComponentUpdate, onComponentSelect]);
+
+  const handleSave = useCallback(() => {
+    editService.toggleEditMode();
+  }, [editService]);
+
+  const handleCancel = useCallback(() => {
+    // Revert changes if needed
+    editService.toggleEditMode();
+  }, [editService]);
+
   return (
     <div className="canvas-container">
+      {/* Edit Toolbar */}
+      {(editMode.enabled || canvasState.selectedComponents?.length > 0) && (
+        <EditToolbar
+          editMode={editMode}
+          onToolChange={tool => editService.setTool(tool)}
+          onToggleEdit={handleToggleEdit}
+          onUndo={handleUndo}
+          onRedo={handleRedo}
+          onDelete={handleDelete}
+          onSnapToGridToggle={enabled => editService.toggleSnapToGrid()}
+          onSnapToPointsToggle={enabled => editService.toggleSnapToPoints()}
+          onSnapDistanceChange={distance => editService.setSnapDistance(distance)}
+          onShowDimensionsToggle={enabled => editService.toggleShowDimensions()}
+          onShowAnglesToggle={enabled => editService.toggleShowAngles()}
+          onSave={handleSave}
+          onCancel={handleCancel}
+          canUndo={editService.canUndo()}
+          canRedo={editService.canRedo()}
+          hasSelection={canvasState.selectedComponents?.length > 0}
+        />
+      )}
+      
       <Stage
         ref={stageRef}
         width={width}
@@ -250,18 +444,39 @@ const Canvas: React.FC<CanvasProps> = ({
             )}
 
             {/* Components */}
-            {visibleComponents.map(component => (
-              <ComponentShape
-                key={component.id}
-                component={component}
-                isSelected={canvasState.selectedComponents.includes(component.id)}
-                isHovered={canvasState.hoveredComponent === component.id}
-                showLabel={canvasState.showLabels}
-                onClick={handleComponentClick}
-                onDragEnd={handleComponentDrag}
-                draggable={canvasState.tool === 'select' && !component.style.locked}
-              />
-            ))}
+            {visibleComponents.map(component => {
+              const isSelected = canvasState.selectedComponents?.includes(component.id);
+              const isEditing = editMode.enabled && editMode.selectedComponent === component.id;
+              
+              return (
+                <React.Fragment key={component.id}>
+                  <ComponentShape
+                    component={component}
+                    isSelected={isSelected && !isEditing}
+                    isHovered={canvasState.hoveredComponent === component.id}
+                    showLabel={canvasState.showLabels}
+                    onClick={handleComponentClick}
+                    onDragEnd={handleComponentDrag}
+                    draggable={canvasState.tool === 'select' && !component.style.locked && !isEditing}
+                  />
+                  {isEditing && (
+                    <EditableShape
+                      component={component as EditableComponent}
+                      isSelected={isSelected}
+                      isEditing={isEditing}
+                      onUpdate={(updates) => onComponentUpdate(component.id, updates)}
+                      onEditPointMove={(pointId, newX, newY) => 
+                        handleEditPointMove(component.id, pointId, newX, newY)
+                      }
+                      snapToGrid={editMode.snapToGrid}
+                      gridSize={10}
+                      showDimensions={editMode.showDimensions}
+                      showAngles={editMode.showAngles}
+                    />
+                  )}
+                </React.Fragment>
+              );
+            })}
 
             {/* Selection box */}
             {selectionRect && (
