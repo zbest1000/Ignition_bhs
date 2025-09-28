@@ -18,6 +18,7 @@ import {
   Space,
   Radio,
   Menu,
+  Progress,
 } from 'antd';
 import {
   LeftOutlined,
@@ -47,6 +48,7 @@ import FileValidation from '../components/FileValidation';
 import api from '../services/api';
 import socket from '../services/socket';
 import ConveyorEngine from '../services/conveyorEngine';
+import { nativeOCRService } from '../services/nativeOCRService';
 import { v4 as uuidv4 } from 'uuid';
 import './ProjectEditor.css';
 import ComponentGroupingManager from '../components/ComponentGroupingManager';
@@ -285,8 +287,128 @@ const ProjectEditor: React.FC = () => {
   const handleOCRProcess = async (fileId: string, fileName: string) => {
     try {
       setLoadingState(`ocr-${fileId}`, true);
-      await api.processOCR(projectId!, fileId);
-      message.success(`OCR processing started for "${fileName}"`);
+      
+      // Find the file in the project
+      const file = project?.files.find(f => f.id === fileId);
+      if (!file) {
+        throw new Error('File not found');
+      }
+
+      // Create image URL for OCR processing
+      const imageUrl = `http://localhost:3001/uploads/${file.filename}`;
+      
+      // Show progress modal
+      const modal = Modal.info({
+        title: `Processing OCR for ${fileName}`,
+        content: (
+          <div>
+            <Progress percent={0} status="active" />
+            <p>Initializing OCR engine...</p>
+          </div>
+        ),
+        okButtonProps: { style: { display: 'none' } },
+        maskClosable: false,
+      });
+
+      let progressPercent = 0;
+      
+      // Set up progress listener
+      nativeOCRService.onProgress(fileId, (progress) => {
+        progressPercent = Math.round(progress.progress * 100);
+        modal.update({
+          content: (
+            <div>
+              <Progress percent={progressPercent} status="active" />
+              <p>{progress.status}</p>
+            </div>
+          ),
+        });
+      });
+
+      // Process the image with native OCR
+      const startTime = Date.now();
+      const ocrResult = await nativeOCRService.processImage(imageUrl, {
+        jobId: fileId,
+        preprocessImage: true,
+        detectComponents: true,
+      });
+      
+      const processingTime = Date.now() - startTime;
+      ocrResult.metadata.processingTime = processingTime;
+
+      // Close progress modal
+      modal.destroy();
+
+      // Show results summary
+      const componentsDetected = (ocrResult as any).components || [];
+      const textBlocksCount = ocrResult.textBlocks.length;
+      
+      Modal.success({
+        title: 'OCR Processing Complete',
+        content: (
+          <div>
+            <p><strong>File:</strong> {fileName}</p>
+            <p><strong>Processing Time:</strong> {(processingTime / 1000).toFixed(2)} seconds</p>
+            <p><strong>Text Blocks Found:</strong> {textBlocksCount}</p>
+            <p><strong>Components Detected:</strong> {componentsDetected.length}</p>
+            {componentsDetected.length > 0 && (
+              <div style={{ marginTop: 10 }}>
+                <p><strong>Detected Components:</strong></p>
+                <ul style={{ maxHeight: 200, overflowY: 'auto' }}>
+                  {componentsDetected.slice(0, 10).map((comp: any, idx: number) => (
+                    <li key={idx}>{comp.name} - {comp.componentType}</li>
+                  ))}
+                  {componentsDetected.length > 10 && (
+                    <li>...and {componentsDetected.length - 10} more</li>
+                  )}
+                </ul>
+              </div>
+            )}
+          </div>
+        ),
+        onOk: async () => {
+          // Add detected components to the canvas
+          if (componentsDetected.length > 0) {
+            const confirmAdd = await new Promise<boolean>((resolve) => {
+              Modal.confirm({
+                title: 'Add Detected Components?',
+                content: `Would you like to add ${componentsDetected.length} detected component(s) to the canvas?`,
+                onOk: () => resolve(true),
+                onCancel: () => resolve(false),
+              });
+            });
+
+            if (confirmAdd) {
+              // Add components to the project
+              for (const component of componentsDetected) {
+                const newComponent: Component = {
+                  ...component,
+                  id: component.id || uuidv4(),
+                  projectId: projectId!,
+                  createdAt: new Date().toISOString(),
+                  updatedAt: new Date().toISOString(),
+                } as Component;
+
+                await handleComponentCreate(newComponent);
+              }
+              
+              message.success(`Added ${componentsDetected.length} component(s) to the canvas`);
+            }
+          }
+        },
+      });
+
+      // Store OCR results in backend for reference
+      try {
+        await api.processOCR(projectId!, fileId, { 
+          nativeOCRResult: ocrResult,
+          componentsDetected: componentsDetected.length 
+        });
+      } catch (error) {
+        // Non-critical error, just log it
+        console.error('Failed to store OCR results in backend:', error);
+      }
+
     } catch (error: any) {
       console.error('OCR process error:', error);
       const errorMessage =
@@ -294,6 +416,7 @@ const ProjectEditor: React.FC = () => {
       message.error(`Failed to process OCR for "${fileName}": ${errorMessage}`);
     } finally {
       setLoadingState(`ocr-${fileId}`, false);
+      nativeOCRService.removeProgressListener(fileId);
     }
   };
 
