@@ -25,6 +25,8 @@ interface ConveyorDrawingServiceProps {
   conveyorTemplates: any[];
   snapToGrid: boolean;
   gridSize: number;
+  canvasWidth: number;
+  canvasHeight: number;
 }
 
 interface DrawingState {
@@ -42,6 +44,8 @@ export const ConveyorDrawingService: React.FC<ConveyorDrawingServiceProps> = ({
   conveyorTemplates,
   snapToGrid,
   gridSize,
+  canvasWidth,
+  canvasHeight,
 }) => {
   const [drawingState, setDrawingState] = useState<DrawingState>({
     isDrawing: false,
@@ -268,8 +272,8 @@ export const ConveyorDrawingService: React.FC<ConveyorDrawingServiceProps> = ({
       {drawingState.isDrawing && (
         <Stage
           ref={stageRef}
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={canvasWidth}
+          height={canvasHeight}
           style={{ position: 'absolute', top: 0, left: 0, zIndex: 2 }}
         >
           <Layer>
