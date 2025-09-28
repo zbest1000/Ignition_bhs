@@ -46,6 +46,7 @@ import Canvas from '../components/Canvas/Canvas';
 import FileValidation from '../components/FileValidation';
 import api from '../services/api';
 import socket from '../services/socket';
+import ConveyorEngine from '../services/conveyorEngine';
 import { v4 as uuidv4 } from 'uuid';
 import './ProjectEditor.css';
 import ComponentGroupingManager from '../components/ComponentGroupingManager';
@@ -586,12 +587,23 @@ const ProjectEditor: React.FC = () => {
     let height = 50;
     let color = '#1890ff';
 
-    // Parse component type
+    // Parse component type - use advanced conveyor engine for conveyors
     if (lowerDesc.includes('conveyor') || lowerDesc.includes('belt')) {
-      componentType = 'straight_conveyor';
-      width = 200;
-      height = 30;
-      color = '#52c41a';
+      // Use ConveyorEngine to create enhanced conveyor component
+      const conveyorComponent = ConveyorEngine.createConveyorComponent(description, { x: 100, y: 100 });
+
+      // Return the conveyor component with all properties
+      return {
+        type: conveyorComponent.type,
+        label: conveyorComponent.label,
+        equipmentId: conveyorComponent.equipmentId,
+        geometry: conveyorComponent.geometry,
+        style: conveyorComponent.style,
+        properties: conveyorComponent.properties,
+        conveyorProperties: conveyorComponent.conveyorProperties,
+        conveyorRendering: conveyorComponent.conveyorRendering,
+        metadata: conveyorComponent.metadata,
+      };
     } else if (lowerDesc.includes('motor') || lowerDesc.includes('pump')) {
       componentType = 'motor';
       width = 60;

@@ -46,6 +46,76 @@ export interface FileInfo {
   };
 }
 
+// Enhanced Conveyor System Types
+export interface ConveyorProperties {
+  // Physical properties
+  length?: number;
+  width?: number;
+  height?: number;
+  beltWidth?: number;
+  angle?: number; // degrees, supports any angle 0-360
+  curveRadius?: number;
+  curveAngle?: number; // degrees for curved sections
+
+  // Visual properties
+  direction?: ConveyorDirection;
+  beltType?: 'flat' | 'troughed' | 'roller' | 'chain';
+  supportType?: 'floor' | 'ceiling' | 'wall';
+  legHeight?: number;
+
+  // Operational properties
+  speed?: number;
+  capacity?: number;
+  material?: string;
+  zones?: ConveyorZone[];
+}
+
+export interface ConveyorZone {
+  id: string;
+  type: 'straight' | 'curve' | 'merge' | 'divert' | 'incline' | 'decline';
+  startPosition: number;
+  length: number;
+  angle?: number;
+  elevation?: number;
+}
+
+export type ConveyorDirection = 'forward' | 'reverse' | 'bidirectional';
+
+export interface ConveyorRendering {
+  segments: ConveyorSegment[];
+  supports: ConveyorSupport[];
+  accessories: ConveyorAccessory[];
+}
+
+export interface ConveyorSegment {
+  type: 'straight' | 'curved' | 'inclined';
+  start: Point;
+  end: Point;
+  angle: number;
+  length: number;
+  width: number;
+  height: number;
+  beltWidth: number;
+  curveCenter?: Point;
+  curveRadius?: number;
+  curveAngle?: number;
+  elevation?: number;
+  supports: number; // number of support legs
+}
+
+export interface ConveyorSupport {
+  position: Point;
+  type: 'leg' | 'bracket' | 'suspension';
+  height: number;
+  width: number;
+}
+
+export interface ConveyorAccessory {
+  type: 'motor' | 'sensor' | 'guide' | 'guard' | 'emergency_stop';
+  position: Point;
+  orientation: number;
+}
+
 // Component Types - Aligned with Ignition 8.1+ Perspective and Vision
 export interface Component {
   id: string;
@@ -62,6 +132,8 @@ export interface Component {
   scripts: ComponentScripts;
   properties: Record<string, any>;
   ignitionProperties: IgnitionComponentProperties;
+  conveyorProperties?: ConveyorProperties;
+  conveyorRendering?: ConveyorRendering;
   createdAt: string;
   updatedAt: string;
 }

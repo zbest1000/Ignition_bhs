@@ -2,6 +2,8 @@ import React from 'react';
 import { Group, Rect, Path, Text, Circle, Line } from 'react-konva';
 import Konva from 'konva';
 import { Component, Point } from '../../types';
+import ConveyorEngine from '../../services/conveyorEngine';
+import ConveyorRenderer from './ConveyorRenderer';
 
 interface ComponentShapeProps {
   component: Component;
@@ -43,49 +45,25 @@ const ComponentShape: React.FC<ComponentShapeProps> = ({
       case 'roller_conveyor':
       case 'chain_conveyor':
       case 'accumulation_conveyor':
-      case 'accumulation':
-        // Determine arrow orientation
-        const arrowRotation: number =
-          (component.properties as any)?.arrowRotation ??
-          (geometry.width >= geometry.height ? 0 : 90);
-
-        // Generate arrow path based on rotation (0 = right, 90 = down, 180 = left, 270 = up)
-        const getArrowPath = (rotation: number): string => {
-          switch (rotation % 360) {
-            case 0: // right
-              return `M ${geometry.width - 20} ${geometry.height / 2 - 3} L ${geometry.width - 10} ${geometry.height / 2} L ${geometry.width - 20} ${geometry.height / 2 + 3}`;
-            case 90: // down
-              return `M ${geometry.width / 2 - 3} ${geometry.height - 20} L ${geometry.width / 2} ${geometry.height - 10} L ${geometry.width / 2 + 3} ${geometry.height - 20}`;
-            case 180: // left
-              return `M 20 ${geometry.height / 2 - 3} L 10 ${geometry.height / 2} L 20 ${geometry.height / 2 + 3}`;
-            case 270: // up
-              return `M ${geometry.width / 2 - 3} 20 L ${geometry.width / 2} 10 L ${geometry.width / 2 + 3} 20`;
-            default:
-              return '';
-          }
-        };
+      case 'accumulation': {
+        // Use enhanced conveyor engine for rendering
+        const conveyorRendering = component.conveyorRendering || ConveyorEngine.generateConveyorRendering(
+          geometry,
+          component.conveyorProperties || {},
+          style
+        );
 
         return (
-          <>
-            {/* Main conveyor body - clean rectangle without confusing lines */}
-            <Rect
-              width={geometry.width}
-              height={geometry.height}
-              fill={style.fill}
-              stroke={style.stroke}
-              strokeWidth={style.strokeWidth}
-              opacity={style.opacity}
-              cornerRadius={2}
-            />
-            {/* Direction arrow */}
-            <Path
-              data={getArrowPath(arrowRotation)}
-              fill="none"
-              stroke={style.stroke}
-              strokeWidth={2}
-            />
-          </>
+          <ConveyorRenderer
+            segments={conveyorRendering.segments}
+            supports={conveyorRendering.supports}
+            accessories={conveyorRendering.accessories}
+            style={style}
+            x={0}
+            y={0}
+          />
         );
+      }
 
       case 'curve_90_conveyor':
       case 'curve_90': {
